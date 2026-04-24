@@ -4,8 +4,6 @@
 
 ```mermaid
 ---
-config:
-  theme: 'forest'
 title: Quizz Entitiy Relationship Diagram
 ---
 
