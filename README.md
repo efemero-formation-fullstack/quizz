@@ -13,7 +13,7 @@ erDiagram
 		string username "NOT NULL"
 		string email "NOT NULL"
 		date birthdate "NOT NULL"
-		string gender "NOT NULL"
+		enum gender "M,F,O"
 		string password "NOT NULL"
 		enum role "ADMIN,PLAYER"
 	}
