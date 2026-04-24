@@ -12,6 +12,8 @@ erDiagram
 		int id PK "IDENTITY"
 		string username "NOT NULL"
 		string email "NOT NULL"
+		date birthdate "NOT NULL"
+		string gender "NOT NULL"
 		string password "NOT NULL"
 		enum role "ADMIN,PLAYER"
 	}
