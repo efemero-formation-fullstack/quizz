@@ -1,11 +1,11 @@
-FROM denoland/deno:alpine
+FROM node:alpine
 
 WORKDIR /app
 
 COPY . .
 
-RUN deno install
+RUN npm install
 
 EXPOSE 3000
 
-CMD ["deno", "run", "start:dev"]
+CMD ["npm", "run", "start:dev"]

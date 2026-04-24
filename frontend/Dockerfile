@@ -1,4 +1,4 @@
-FROM node:25-alpine
+FROM node:25
 
 WORKDIR /usr/app
 
@@ -8,4 +8,4 @@ RUN npm install
 
 EXPOSE 4200
 
-CMD ["npm", "run", "start:dev"]
+CMD npm i && npm run start
