@@ -1,18 +1,22 @@
 import { MiddlewareConsumer, Module, NestModule } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
-import { TypeOrmModule } from '@nestjs/typeorm';
 import { JwtModule } from '@nestjs/jwt';
+import { TypeOrmModule } from '@nestjs/typeorm';
+import { SnakeNamingStrategy } from 'typeorm-naming-strategies';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import { LoggingMiddleware } from './middlewares/logging.middleware';
-import { AuthMiddleware } from './middlewares/auth/auth.middleware';
-import { UserController } from './controllers/user/user.controller';
-import { UserService } from './services/user/user.service';
-import { UserEntity } from './entities/user.entity';
-import { AuthService } from './services/auth/auth.service';
 import { AuthController } from './controllers/auth/auth.controller';
+import { ThemeController } from './controllers/user/theme.controller';
+import { UserController } from './controllers/user/user.controller';
+import { QuizzEntity } from './entities/quizz.entity';
+import { ThemeEntity } from './entities/theme.entity';
+import { UserEntity } from './entities/user.entity';
+import { LoggingMiddleware } from './middleware/logging.middleware';
+import { AuthMiddleware } from './middlewares/auth/auth.middleware';
+import { AuthService } from './services/auth/auth.service';
+import { ThemeService } from './services/user/theme.service';
+import { UserService } from './services/user/user.service';
 
-console.log(process.env);
 @Module({
   imports: [
     ConfigModule.forRoot(),
@@ -29,12 +33,13 @@ console.log(process.env);
       password: process.env.POSTGRES_PASSWORD,
       synchronize: true,
       logging: true,
-      entities: [UserEntity],
+      entities: [UserEntity, QuizzEntity, ThemeEntity],
+      namingStrategy: new SnakeNamingStrategy(),
     }),
-    TypeOrmModule.forFeature([UserEntity]),
+    TypeOrmModule.forFeature([UserEntity, QuizzEntity, ThemeEntity]),
   ],
-  controllers: [AppController, UserController, AuthController],
-  providers: [AppService, UserService, AuthService],
+  controllers: [AppController, UserController, AuthController, ThemeController],
+  providers: [AppService, UserService, AuthService, ThemeService],
 })
 export class AppModule implements NestModule {
   configure(consumer: MiddlewareConsumer) {
