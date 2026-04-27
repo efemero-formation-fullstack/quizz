@@ -3,6 +3,7 @@ import { IsString, MinLength } from "class-validator";
 export class QuestionCreateDto {
     @IsString()
     @MinLength(10)
-    question: string;
+    question:string;
+
 
 }

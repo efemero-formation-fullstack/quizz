@@ -7,7 +7,7 @@ import { DeleteDateColumn } from "typeorm";
 export function questionEntityToQuestionDto (entity: QuestionEntity): QuestionDto {
     const dto = new QuestionDto();
     dto.answers = entity.answers;
-    dto.id = entity.id;
+    dto.correct_answer_id = entity.correct_answer_id;
     dto.question = entity.question;
     dto.id = entity.id;
 
@@ -17,7 +17,7 @@ export function questionEntityToQuestionDto (entity: QuestionEntity): QuestionDt
 export function questionEntityToQuestionListingDto (entity: QuestionEntity): QuestionDto {
     const dto = new QuestionDto();
     dto.answers = entity.answers;
-    dto.id = entity.id;
+    dto.correct_answer_id = entity.correct_answer_id;
     dto.question = entity.question;
     dto.id = entity.id;
 
