@@ -1,24 +1,25 @@
 import { MiddlewareConsumer, Module, NestModule } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
+import { JwtModule } from '@nestjs/jwt';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import { LoggingMiddleware } from './middleware/logging.middleware';
-import {UserController} from "./controllers/user/user.controller";
-import {UserService} from "./services/user/user.service";
-import {UserEntity} from "./entities/user.entity";
-import {JwtModule} from "@nestjs/jwt";
-import {AuthController} from "./controllers/auth/auth.controller";
-import {AuthService} from "./services/auth/auth.service";
+import { LoggingMiddleware } from './middlewares/logging.middleware';
+import { AuthMiddleware } from './middlewares/auth/auth.middleware';
+import { UserController } from './controllers/user/user.controller';
+import { UserService } from './services/user/user.service';
+import { UserEntity } from './entities/user.entity';
+import { AuthService } from './services/auth/auth.service';
+import { AuthController } from './controllers/auth/auth.controller';
 
 console.log(process.env);
 @Module({
   imports: [
     ConfigModule.forRoot(),
-      JwtModule.register({
-        secret: process.env.JWT_SECRET,
-        signOptions: { expiresIn:'1d'}
-      }),
+    JwtModule.register({
+      secret: process.env.JWT_SECRET,
+      signOptions: { expiresIn: '1d' },
+    }),
     TypeOrmModule.forRoot({
       type: 'postgres',
       host: process.env.POSTGRES_HOST,
@@ -38,5 +39,6 @@ console.log(process.env);
 export class AppModule implements NestModule {
   configure(consumer: MiddlewareConsumer) {
     consumer.apply(LoggingMiddleware).forRoutes('*');
+    consumer.apply(AuthMiddleware).forRoutes('*');
   }
 }
