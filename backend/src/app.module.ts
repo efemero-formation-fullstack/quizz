@@ -4,6 +4,9 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { LoggingMiddleware } from './middleware/logging.middleware';
+import {UserController} from "./controllers/user/user.controller";
+import {UserService} from "./services/user/user.service";
+import {UserEntity} from "./entities/user.entity";
 
 console.log(process.env);
 @Module({
@@ -18,12 +21,12 @@ console.log(process.env);
       password: process.env.POSTGRES_PASSWORD,
       synchronize: true,
       logging: true,
-      entities: [],
+      entities: [UserEntity],
     }),
-    TypeOrmModule.forFeature([]),
+    TypeOrmModule.forFeature([UserEntity]),
   ],
-  controllers: [AppController],
-  providers: [AppService],
+  controllers: [AppController, UserController],
+  providers: [AppService, UserService],
 })
 export class AppModule implements NestModule {
   configure(consumer: MiddlewareConsumer) {
