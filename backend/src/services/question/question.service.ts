@@ -1,7 +1,7 @@
 import { Injectable, NotFoundException } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
-import { QuestionDto } from 'src/dtos/question.dto';
-import { QuestionEntity } from 'src/entities/question.entity';
+import { QuestionCreateDto } from '../../dtos/question.form.dto';
+import { QuestionEntity } from '../../entities/question.entity';
 import { Repository } from 'typeorm';
 
 @Injectable()
@@ -12,7 +12,7 @@ constructor(
     private readonly _questionRepo: Repository<QuestionEntity>
 ){}
 
-async create(dto: QuestionDto):Promise<QuestionEntity>{
+async create(dto: QuestionCreateDto):Promise<QuestionEntity>{
     const question = this._questionRepo.create(dto);
     return await this._questionRepo.save(question);
 }
@@ -20,7 +20,7 @@ async create(dto: QuestionDto):Promise<QuestionEntity>{
 async getById(id: number):Promise<QuestionEntity>{
     const question = await this._questionRepo.findOne({
         where: { id },
-        relations: ['question'],
+        relations: ['answers'],
     });
 
     if(!question){
@@ -32,7 +32,7 @@ async getById(id: number):Promise<QuestionEntity>{
 
 async getAll():Promise<QuestionEntity[]>{
     return await this._questionRepo.find({
-        relations:['question'],
+        relations: ['answers'],
     });
 } 
 

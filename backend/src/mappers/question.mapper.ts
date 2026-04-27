@@ -1,8 +1,6 @@
-
-import { QuestionDto } from "src/dtos/question.dto";
-import { QuestionCreateDto } from "src/dtos/question.form.dto";
-import { QuestionEntity } from "src/entities/question.entity";
-import { DeleteDateColumn } from "typeorm";
+import { QuestionDto } from '../dtos/question.dto';
+import { QuestionCreateDto } from '../dtos/question.form.dto';
+import { QuestionEntity } from '../entities/question.entity';
 
 export function questionEntityToQuestionDto (entity: QuestionEntity): QuestionDto {
     const dto = new QuestionDto();
