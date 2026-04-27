@@ -10,14 +10,14 @@ import { ThemeEntity } from './theme.entity';
 
 @Entity({ name: 'quizzes' })
 export class QuizzEntity {
+  @PrimaryGeneratedColumn()
+  id: number;
+
   @Column()
   title: string;
 
   @Column()
   imgUrl: string;
-
-  @PrimaryGeneratedColumn()
-  id: number;
 
   @Column({
     type: 'enum',

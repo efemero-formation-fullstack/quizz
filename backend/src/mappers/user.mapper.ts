@@ -1,5 +1,3 @@
-import { ThemeDto } from 'src/dto/theme.dto';
-import { ThemeEntity } from 'src/entities/theme.entity';
 import { UserDto } from '../dto/user.dto';
 import { UserEntity } from '../entities/user.entity';
 
@@ -13,11 +11,3 @@ export function userEntityToDto(entity: UserEntity) {
   dto.role = entity.role;
   return dto;
 }
-
-export function themeEntityToDto(entity: ThemeEntity) {
-  const dto = new ThemeDto();
-  dto.id = entity.id;
-  dto.name = entity.name;
-  return dto;
-}
-

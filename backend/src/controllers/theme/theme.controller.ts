@@ -1,7 +1,7 @@
 import { Controller, Delete, Get, Param, ParseIntPipe } from '@nestjs/common';
 import { ThemeDto } from 'src/dto/theme.dto';
-import { ThemeService } from 'src/services/user/theme.service';
-import { themeEntityToDto, userEntityToDto } from '../../mappers/user.mapper';
+import { themeEntityToDto } from 'src/mappers/theme.mapper';
+import { ThemeService } from 'src/services/theme/theme.service';
 
 @Controller('theme')
 export class ThemeController {
@@ -26,4 +26,3 @@ export class ThemeController {
     await this.themeService.delete(id);
   }
 }
-

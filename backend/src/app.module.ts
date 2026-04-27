@@ -6,15 +6,17 @@ import { SnakeNamingStrategy } from 'typeorm-naming-strategies';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { AuthController } from './controllers/auth/auth.controller';
-import { ThemeController } from './controllers/user/theme.controller';
+import { QuizzController } from './controllers/quizz/quizz.controller';
+import { ThemeController } from './controllers/theme/theme.controller';
 import { UserController } from './controllers/user/user.controller';
 import { QuizzEntity } from './entities/quizz.entity';
 import { ThemeEntity } from './entities/theme.entity';
 import { UserEntity } from './entities/user.entity';
-import { LoggingMiddleware } from './middleware/logging.middleware';
 import { AuthMiddleware } from './middlewares/auth/auth.middleware';
+import { LoggingMiddleware } from './middlewares/logging.middleware';
 import { AuthService } from './services/auth/auth.service';
-import { ThemeService } from './services/user/theme.service';
+import { QuizzService } from './services/quizz/quizz.service';
+import { ThemeService } from './services/theme/theme.service';
 import { UserService } from './services/user/user.service';
 
 @Module({
@@ -38,8 +40,14 @@ import { UserService } from './services/user/user.service';
     }),
     TypeOrmModule.forFeature([UserEntity, QuizzEntity, ThemeEntity]),
   ],
-  controllers: [AppController, UserController, AuthController, ThemeController],
-  providers: [AppService, UserService, AuthService, ThemeService],
+  controllers: [
+    AppController,
+    UserController,
+    AuthController,
+    ThemeController,
+    QuizzController,
+  ],
+  providers: [AppService, UserService, AuthService, ThemeService, QuizzService],
 })
 export class AppModule implements NestModule {
   configure(consumer: MiddlewareConsumer) {
