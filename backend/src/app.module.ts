@@ -7,6 +7,7 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { AnswerController } from './controllers/answer/answer.controller';
 import { AuthController } from './controllers/auth/auth.controller';
+import { QuestionController } from './controllers/question/question.controller';
 import { QuizzController } from './controllers/quizz/quizz.controller';
 import { ThemeController } from './controllers/theme/theme.controller';
 import { UserController } from './controllers/user/user.controller';
@@ -64,7 +65,7 @@ console.log(process.env);
     AppController,
     AnswerController,
     AuthController,
-    QuizzController,
+    QuestionController,
     QuizzController,
     ThemeController,
     UserController,
