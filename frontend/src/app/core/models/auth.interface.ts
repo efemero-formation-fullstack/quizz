@@ -3,8 +3,9 @@ export interface LoginResponse {
 }
 
 export interface JwtDecoded {
-  id:number;
-  role:string;
+
+  id: number;
+  role: string;
   exp: number;
 }
 
@@ -17,6 +18,12 @@ export interface RegisterData {
 }
 
 export interface LoginData {
-  username:string;
-  password:string;
+
+  username: string;
+  email: string;
+  password: string;
+  birthdate: string;
+  gender: string;
+}
+
 }
