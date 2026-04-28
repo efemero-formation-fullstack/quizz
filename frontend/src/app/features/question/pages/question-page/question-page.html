@@ -1,0 +1,37 @@
+<p>question-page works!</p>
+<form [formGroup]="formQuestion" (ngSubmit)="onSubmitNewQuestion()">
+  <div>
+    <label for="theme-input">Theme :</label>
+    <input type="text" id="theme-input" formControlName="theme" />
+    <app-forms-error-display [control]="theme" name="theme" />
+  </div>
+  <div>
+    <label for="question-input">Question :</label>
+    <input type="text" id="question-input" formControlName="question" />
+    <app-forms-error-display [control]="question" name="question" />
+  </div>
+  <div>
+    <label for="answer-input">Answer :</label>
+    <input type="text" id="answer-input" formControlName="answer" />
+    <app-forms-error-display [control]="correct_answer_id" name="answer" />
+  </div>
+</form>
+
+<table>
+  <thead>
+    <th>id</th>
+    <th>theme</th>
+    <th>question</th>
+    <th>answer</th>
+  </thead>
+  <tbody>
+    @for (question of questions(); track question.id) {
+      <tr>
+        <td>{{ question.id }}</td>
+        <td>{{ question.theme }}</td>
+        <td>{{ question.question }}</td>
+        <td>{{ question.correct_answer_id }}</td>
+      </tr>
+    }
+  </tbody>
+</table>
