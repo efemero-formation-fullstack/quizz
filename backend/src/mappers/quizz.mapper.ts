@@ -5,6 +5,7 @@ export function QuizzEntityToDto(entity: QuizzEntity) {
   const dto = new QuizzDto();
   dto.id = entity.id;
   dto.title = entity.title;
+  dto.imgUrl = entity.imgUrl;
   dto.visibility = entity.visibility;
   return dto;
 }
