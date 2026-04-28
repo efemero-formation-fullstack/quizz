@@ -11,13 +11,13 @@ import {
 import { AnswerEntity } from './answer.entity';
 import { QuizzEntity } from './quizz.entity';
 
-@Entity({ name: 'question' })
+@Entity({ name: 'questions' })
 export class QuestionEntity {
   @PrimaryGeneratedColumn()
   id: number;
 
   @OneToOne(() => AnswerEntity)
-  @JoinColumn()
+  @JoinColumn({ name: 'correct_answer_id' })
   correct_answer: AnswerEntity;
 
   @Column({ type: 'text' })

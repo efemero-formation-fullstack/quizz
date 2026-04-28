@@ -82,7 +82,7 @@ async function main() {
         ]) {
           for (const q of level) {
             let answers: AnswerEntity[] = [];
-            let correct_answer: AnswerEntity;
+            let correct_answer: AnswerEntity | null = null;
             for (const r of q.propositions) {
               answer = em.create(AnswerEntity, {
                 answer: r,
@@ -90,16 +90,17 @@ async function main() {
               answer = await em.save(answer);
               if (r === q.réponse) {
                 correct_answer = answer;
-              } else {
-                answers.push(answer);
               }
+              answers.push(answer);
             }
-            question = em.create(QuestionEntity, {
-              question: q.question,
-              answers: answers,
-              correct_answer: correct_answer,
-            });
-            await em.save(question);
+            if (correct_answer) {
+              question = em.create(QuestionEntity, {
+                question: q.question,
+                answers: answers,
+                correct_answer: correct_answer,
+              });
+              await em.save(question);
+            }
           }
         }
       }
