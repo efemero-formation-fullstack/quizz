@@ -19,7 +19,7 @@ export class QuestionService {
   async getById(id: number): Promise<QuestionEntity> {
     const question = await this._questionRepo.findOne({
       where: { id },
-      relations: ['answers', 'correct_answer'],
+      relations: ['answers', 'correct_answer', 'theme'],
     });
 
     if (!question) {
@@ -31,7 +31,7 @@ export class QuestionService {
 
   async getAll(): Promise<QuestionEntity[]> {
     return await this._questionRepo.find({
-      relations: ['answers', 'correct_answer'],
+      relations: ['answers', 'correct_answer', 'theme'],
     });
   }
 }

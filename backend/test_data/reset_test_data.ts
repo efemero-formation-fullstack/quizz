@@ -74,7 +74,8 @@ async function main() {
         theme = em.create(ThemeEntity, {
           name: cat['catégorie-nom-slogan'].fr['catégorie'],
         });
-        await em.save(theme);
+        theme = await em.save(theme);
+        let questions: QuestionEntity[] = [];
         for (const level of [
           cat.quizz.fr['débutant'],
           cat.quizz.fr['confirmé'],
@@ -98,11 +99,15 @@ async function main() {
                 question: q.question,
                 answers: answers,
                 correct_answer: correct_answer,
+                theme: theme,
               });
-              await em.save(question);
+              question = await em.save(question);
+              questions.push(question);
             }
           }
         }
+        theme.questions = questions;
+        await em.save(theme);
       }
     });
   } catch (e) {

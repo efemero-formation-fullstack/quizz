@@ -1,12 +1,13 @@
 import { AnswerDto } from 'src/dtos/answer.dto';
 import { AnswerCreateDto } from 'src/dtos/answer.form.dto';
 import { AnswerEntity } from 'src/entities/answer.entity';
+import { questionEntityToQuestionDto } from './question.mapper';
 
 export function answerEntityToAnswerDto(entity: AnswerEntity): AnswerDto {
   const dto = new AnswerDto();
   dto.answer = entity.answer;
   dto.id = entity.id;
-  dto.questions = entity.question;
+  dto.question = questionEntityToQuestionDto(entity.question);
 
   return dto;
 }
@@ -16,8 +17,9 @@ export function answerEntityToListingDto(entity: AnswerEntity): AnswerDto {
 
   dto.answer = entity.answer;
   dto.id = entity.id;
-  dto.questions = entity.question;
-
+  if (entity.question) {
+    dto.question = questionEntityToQuestionDto(entity.question);
+  }
   return dto;
 }
 

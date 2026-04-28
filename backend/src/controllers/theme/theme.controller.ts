@@ -18,6 +18,7 @@ export class ThemeController {
     @Param('id', ParseIntPipe) id: number,
   ): Promise<{ data: ThemeDto }> {
     const theme = await this.themeService.getById(id);
+    console.log(theme);
     return { data: themeEntityToDto(theme) };
   }
 
