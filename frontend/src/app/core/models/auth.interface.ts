@@ -23,3 +23,8 @@ export interface LoginData {
   birthdate: string;
   gender: string;
 }
+
+export interface LoginData {
+  username: string;
+  password: string;
+}
