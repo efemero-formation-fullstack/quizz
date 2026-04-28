@@ -3,12 +3,22 @@ export interface LoginResponse {
 }
 
 export interface JwtDecoded {
+
   id: number;
   role: string;
   exp: number;
 }
 
 export interface RegisterData {
+  username:string;
+  email:string;
+  password:string;
+  birthdate:string;
+  gender:string;
+}
+
+export interface LoginData {
+
   username: string;
   email: string;
   password: string;
@@ -16,7 +26,4 @@ export interface RegisterData {
   gender: string;
 }
 
-export interface LoginData {
-  username: string;
-  password: string;
 }
