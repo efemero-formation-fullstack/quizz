@@ -1,10 +1,10 @@
 import { Injectable } from '@nestjs/common';
-import { InjectRepository } from '@nestjs/typeorm';
-import { Repository } from 'typeorm';
-import { UserEntity } from '../../entities/user.entity';
 import { JwtService } from '@nestjs/jwt';
+import { InjectRepository } from '@nestjs/typeorm';
 import * as bcrypt from 'bcrypt';
-import { LoginFormDto, RegisterFormDto } from '../../dto/auth.form.dto';
+import { Repository } from 'typeorm';
+import { LoginFormDto, RegisterFormDto } from '../../dtos/auth.form.dto';
+import { UserEntity } from '../../entities/user.entity';
 
 @Injectable()
 export class AuthService {
@@ -15,10 +15,14 @@ export class AuthService {
   ) {}
 
   async register(data: RegisterFormDto): Promise<UserEntity> {
-    const existingEmail = await this._userRepo.findOne({ where: { email: data.email } });
+    const existingEmail = await this._userRepo.findOne({
+      where: { email: data.email },
+    });
     if (existingEmail) throw new Error('Email already exists');
 
-    const existingUsername = await this._userRepo.findOne({ where: { username: data.username } });
+    const existingUsername = await this._userRepo.findOne({
+      where: { username: data.username },
+    });
     if (existingUsername) throw new Error('Username already exists');
 
     data.password = await bcrypt.hash(data.password, 10);
@@ -26,7 +30,9 @@ export class AuthService {
   }
 
   async login(data: LoginFormDto): Promise<{ token: string }> {
-    const user = await this._userRepo.findOne({ where: { username: data.username } });
+    const user = await this._userRepo.findOne({
+      where: { username: data.username },
+    });
     if (!user) throw new Error('Invalid credentials');
 
     const isPasswordValid = await bcrypt.compare(data.password, user.password);

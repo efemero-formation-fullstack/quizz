@@ -1,4 +1,4 @@
-import { QuizzDto } from 'src/dto/quizz.dto';
+import { QuizzDto } from 'src/dtos/quizz.dto';
 import { QuizzEntity } from 'src/entities/quizz.entity';
 
 export function QuizzEntityToDto(entity: QuizzEntity) {

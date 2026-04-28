@@ -1,5 +1,5 @@
 import { Controller, Delete, Get, Param, ParseIntPipe } from '@nestjs/common';
-import { ThemeDto } from 'src/dto/theme.dto';
+import { ThemeDto } from 'src/dtos/theme.dto';
 import { themeEntityToDto } from 'src/mappers/theme.mapper';
 import { ThemeService } from 'src/services/theme/theme.service';
 

@@ -1,4 +1,4 @@
-import { ThemeDto } from 'src/dto/theme.dto';
+import { ThemeDto } from 'src/dtos/theme.dto';
 import { ThemeEntity } from 'src/entities/theme.entity';
 
 export function themeEntityToDto(entity: ThemeEntity) {

@@ -7,8 +7,8 @@ import {
   ParseIntPipe,
   Patch,
 } from '@nestjs/common';
-import { UserDto } from '../../dto/user.dto';
-import { UpdateUserDto } from '../../dto/user.form.dto';
+import { UserDto } from '../../dtos/user.dto';
+import { UpdateUserDto } from '../../dtos/user.form.dto';
 import { UserRole } from '../../enums/user-role.enum';
 import { RequireRole } from '../../guards/require-role/require-role.decorator';
 import { userEntityToDto } from '../../mappers/user.mapper';
