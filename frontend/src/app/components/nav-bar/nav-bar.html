@@ -1,0 +1,16 @@
+<nav>
+  <ul>
+    <li><a routerLink="/match/create">New Quizz</a></li>
+    <li><a routerLink="/quizz">Quizz</a></li>
+
+    @if (isConnected()) {
+      <li><a routerLink="/member/me">Profil</a></li>
+      @if (isAdmin()) {
+        <li><a routerLink="/member">Add Member</a></li>
+      }
+      <li><a (click)="onLogoutBtn()" routerLink="/">Logout</a></li>
+    } @else {
+      <li><a routerLink="auth/login">Login</a></li>
+    }
+  </ul>
+</nav>
