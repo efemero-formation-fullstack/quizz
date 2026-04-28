@@ -85,6 +85,5 @@ console.log(process.env);
 export class AppModule implements NestModule {
   configure(consumer: MiddlewareConsumer) {
     consumer.apply(LoggingMiddleware).forRoutes('*');
-    consumer.apply(AuthMiddleware).forRoutes('*');
   }
 }

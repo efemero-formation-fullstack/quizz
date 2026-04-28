@@ -26,3 +26,13 @@ services:
     shm_size: 128mb
     env_file:
       - ./backend/.env
+
+  reset_db:
+    build: 
+      context: ./backend/
+      dockerfile: reset_db.Dockerfile
+    depends_on: 
+      - db
+    profiles:
+      - reset_db
+    
