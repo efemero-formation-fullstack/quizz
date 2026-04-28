@@ -1,1 +1,31 @@
-<p>register-page works!</p>
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <h1>Inscription</h1>
+
+  @if (error()) {
+    <p>{{ error() }}</p>
+  }
+
+  <label for="username">Nom d'utilisateur</label>
+  <input id="username" type="text" formControlName="username" />
+
+  <label for="email">Email</label>
+  <input id="email" type="email" formControlName="email" />
+
+  <label for="password">Mot de passe</label>
+  <input id="password" type="password" formControlName="password" />
+
+  <label for="birthdate">Date de naissance</label>
+  <input id="birthdate" type="date" formControlName="birthdate" />
+
+  <label for="gender">Genre</label>
+  <select id="gender" formControlName="gender">
+    <option value="">-- Choisir --</option>
+    <option value="M">Homme</option>
+    <option value="F">Femme</option>
+    <option value="O">Autre</option>
+  </select>
+
+  <button type="submit" [disabled]="form.invalid">S'inscrire</button>
+
+  <a routerLink="/auth/login">Déjà un compte ?</a>
+</form>

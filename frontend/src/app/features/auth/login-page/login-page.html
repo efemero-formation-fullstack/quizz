@@ -1,1 +1,17 @@
-<p>login-page works!</p>
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <h1>Connexion</h1>
+
+  @if (error()) {
+    <p>{{ error() }}</p>
+  }
+
+  <label for="username">Nom d'utilisateur</label>
+  <input id="username" type="text" formControlName="username" />
+
+  <label for="password">Mot de passe</label>
+  <input id="password" type="password" formControlName="password" />
+
+  <button type="submit" [disabled]="form.invalid">Se connecter</button>
+
+  <a routerLink="/auth/register">Pas encore de compte ?</a>
+</form>
