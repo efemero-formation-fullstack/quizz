@@ -13,6 +13,9 @@ import {
   ThemeEntity,
   UserEntity,
 } from '../src/entities/index';
+import adultes from './openquizzdb_adulte.json';
+import espaces from './openquizzdb_espace.json';
+import jos from './openquizzdb_jo.json';
 import users from './user_quizz.json';
 
 dotenv.config({ path: path.resolve(__dirname, '../.env') });
@@ -62,6 +65,43 @@ async function main() {
       for (userData of users) {
         user = em.create(UserEntity, userData);
         await em.save(user);
+      }
+
+      let theme: ThemeEntity;
+      let question: QuestionEntity;
+      let answer: AnswerEntity;
+      for (const cat of [adultes, jos, espaces]) {
+        theme = em.create(ThemeEntity, {
+          name: cat['catégorie-nom-slogan'].fr['catégorie'],
+        });
+        await em.save(theme);
+        for (const level of [
+          cat.quizz.fr['débutant'],
+          cat.quizz.fr['confirmé'],
+          cat.quizz.fr['expert'],
+        ]) {
+          for (const q of level) {
+            let answers: AnswerEntity[] = [];
+            let correct_answer: AnswerEntity;
+            for (const r of q.propositions) {
+              answer = em.create(AnswerEntity, {
+                answer: r,
+              });
+              answer = await em.save(answer);
+              if (r === q.réponse) {
+                correct_answer = answer;
+              } else {
+                answers.push(answer);
+              }
+            }
+            question = em.create(QuestionEntity, {
+              question: q.question,
+              answers: answers,
+              correct_answer: correct_answer,
+            });
+            await em.save(question);
+          }
+        }
       }
     });
   } catch (e) {

@@ -6,6 +6,7 @@ import {
   ManyToMany,
   PrimaryGeneratedColumn,
 } from 'typeorm';
+import { QuestionEntity } from './question.entity';
 import { ThemeEntity } from './theme.entity';
 
 @Entity({ name: 'quizzes' })
@@ -29,4 +30,8 @@ export class QuizzEntity {
   @ManyToMany(() => ThemeEntity, (t) => t.quizzes)
   @JoinTable({ name: 'quizzes_themes' })
   themes: ThemeEntity[];
+
+  @ManyToMany(() => QuestionEntity, (q) => q.quizzes)
+  @JoinTable({ name: 'quizzes_questions' })
+  questions: QuestionEntity[];
 }

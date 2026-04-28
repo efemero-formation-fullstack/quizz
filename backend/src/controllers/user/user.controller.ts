@@ -19,7 +19,7 @@ export class UserController {
   constructor(private readonly userService: UserService) {}
 
   @Get()
-  // @RequireRole(UserRole.ADMIN)
+  @RequireRole(UserRole.ADMIN)
   async getAll(): Promise<{ data: UserDto[] }> {
     const users = await this.userService.getAll();
     return { data: users.map(userEntityToDto) };
