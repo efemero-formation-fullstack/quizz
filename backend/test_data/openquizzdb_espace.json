@@ -1,0 +1,2250 @@
+{                                     
+  "fournisseur": "OpenQuizzDB - Fournisseur de contenu libre (https://www.openquizzdb.org)",
+  "licence": "CC BY-SA",
+  "rédacteur": "Philippe Bresoux",       
+  "difficulté": "3 / 5",
+  "version": 7,
+  "mise-à-jour": "2026-03-29",
+  "catégorie-nom-slogan": {
+    "fr": {
+      "catégorie": "Sciences",
+      "nom": "Système solaire",
+      "slogan": "Système planétaire de la Voie lactée"
+    },
+    "en": {
+      "catégorie": "Sciences",
+      "nom": "Solar System",
+      "slogan": "Planetary system of the Milky Way"
+    },
+    "es": {
+      "catégorie": "Ciencias",
+      "nom": "Sistema solar",
+      "slogan": "Sistema planetario de la Vía Láctea"
+    },
+    "it": {
+      "catégorie": "Scienze",
+      "nom": "Sistema solare",
+      "slogan": "Sistema planetario della Via Lattea"
+    },
+    "de": {
+      "catégorie": "Wissenschaft",
+      "nom": "Sonnensystem",
+      "slogan": "Planetensystem der Milchstraße"
+    },
+    "nl": {
+      "catégorie": "Sciences",
+      "nom": "Zonnestelsel",
+      "slogan": "Planetair systeem van de Melkweg"
+    }
+  },
+  "quizz": {
+    "fr": {
+      "débutant": [
+      {
+        "id": 1,
+        "question": "Quelle est la plus grande étoile présente dans notre Système solaire ?",
+        "propositions": [
+          "Obéron",
+          "Soleil",
+          "Rhéa",
+          "Junon"
+        ],
+        "réponse": "Soleil",
+        "anecdote": "Le Soleil représente environ 99 % de la masse du Système solaire ainsi constitué, Jupiter représentant plus des deux tiers du reste."
+      },
+      {
+        "id": 2,
+        "question": "Combien de planètes confirmées gravitent autour du Soleil ?",
+        "propositions": [
+          "Quatre",
+          "Huit",
+          "Sept",
+          "Neuf"
+        ],
+        "réponse": "Huit",
+        "anecdote": "Le demi-grand axe de l'orbite de la Terre autour du Soleil est la définition originale de l'unité astronomique (ua)."
+      },
+      {
+        "id": 3,
+        "question": "Quelle ceinture est composée d'au moins trois planètes naines, dont Pluton ?",
+        "propositions": [
+          "Ceinture de Kuiper",
+          "Ceinture de Rhéa",
+          "Ceinture de Callisto",
+          "Ceinture de Chiron"
+        ],
+        "réponse": "Ceinture de Kuiper",
+        "anecdote": "Cette zone en forme d'anneau est similaire à la ceinture d'astéroïdes, mais plus étendue et 200 fois plus massive."
+      },
+      {
+        "id": 4,
+        "question": "Quel est le principal corps céleste du Système solaire ?",
+        "propositions": [
+          "Terre",
+          "Soleil",
+          "Lune",
+          "Pluton"
+        ],
+        "réponse": "Soleil",
+        "anecdote": "Cette étoile naine jaune de la séquence principale de type G2 contient 99% de toute la masse connue du Système solaire."
+      },
+      {
+        "id": 5,
+        "question": "Quelle est la plus connue de toutes les comètes du Système solaire ?",
+        "propositions": [
+          "Encke",
+          "Wild 2",
+          "Halley",
+          "Borrelly"
+        ],
+        "réponse": "Halley",
+        "anecdote": "On en connaît beaucoup plus sur la comète Halley depuis que la sonde Giotto, lancée en 1985, en a sondé le coeur."
+      },
+      {
+        "id": 6,
+        "question": "Quel cosmonaute soviétique fut le premier être humain à avoir orbité la Terre ?",
+        "propositions": [
+          "Guerman Titov",
+          "Vladimir Komarov",
+          "Youri Gagarine",
+          "Grigori Nelioubov"
+        ],
+        "réponse": "Youri Gagarine",
+        "anecdote": "Le premier homme à marcher sur la Lune fut l'astronaute américain Neil Armstrong, qui atterrit sur la Lune le 21 juillet 1969."
+      },
+      {
+        "id": 7,
+        "question": "Quelle est la plus dense des planètes internes du Système solaire ?",
+        "propositions": [
+          "Mercure",
+          "Terre",
+          "Saturne",
+          "Jupiter"
+        ],
+        "réponse": "Terre",
+        "anecdote": "Son hydrosphère liquide est unique parmi les planètes telluriques, et elle est la seule planète où une activité tectonique a été observée."
+      },
+      {
+        "id": 8,
+        "question": "Quelle planète possède deux petits satellites naturels, Déimos et Phobos ?",
+        "propositions": [
+          "Mercure",
+          "Vénus",
+          "Mars",
+          "Jupiter"
+        ],
+        "réponse": "Mars",
+        "anecdote": "L'orbite de Phobos diminue et devrait s'écraser sur Mars dans 50 millions d'années, tandis que Deimos s'éloigne progressivement."
+      },
+      {
+        "id": 9,
+        "question": "Quelle planète est surtout connue pour son système d'anneaux ?",
+        "propositions": [
+          "Jupiter",
+          "Saturne",
+          "Vénus",
+          "Mercure"
+        ],
+        "réponse": "Saturne",
+        "anecdote": "Saturne est une planète géante, au même titre que Jupiter, Uranus et Neptune, et plus précisément une géante gazeuse."
+      },
+      {
+        "id": 10,
+        "question": "De quelle galaxie le Système solaire fait-il intégralement partie ?",
+        "propositions": [
+          "Grand Chien",
+          "M32",
+          "Petite Ourse",
+          "Voie lactée"
+        ],
+        "réponse": "Voie lactée",
+        "anecdote": "La Voie lactée est une galaxie spirale barrée comprend de 200 à 400 milliards d'étoiles et au minimum 100 milliards de planètes."
+      }
+    ],
+    "confirmé": [
+      {
+        "id": 11,
+        "question": "De quelle catégorie de planète Mercure, Vénus, la Terre et Mars font-elles partie ?",
+        "propositions": [
+          "Géantes",
+          "Gazeuses",
+          "Tellurique",
+          "Naines"
+        ],
+        "réponse": "Tellurique",
+        "anecdote": "Une planète tellurique est essentiellement composée de roches et de métal qui possède en général trois enveloppes concentriques."
+      },
+      {
+        "id": 12,
+        "question": "Quel est le plus grand objet connu de la ceinture de Kuiper ?",
+        "propositions": [
+          "Lempo",
+          "Varuna",
+          "Orcus",
+          "Pluton"
+        ],
+        "réponse": "Pluton",
+        "anecdote": "Découvert en 1930 et considéré comme une planète, Pluton fut reclassifié en 2006 lors de l'adoption d'une définition de ces corps."
+      },
+      {
+        "id": 13,
+        "question": "Quelle est l'étoile la plus proche de la Terre après le Soleil ?",
+        "propositions": [
+          "Ross 248",
+          "Castor",
+          "Proxima Centauri",
+          "Alpha Arae"
+        ],
+        "réponse": "Proxima Centauri",
+        "anecdote": "C'est une naine rouge dont le rayon est environ une fois et demi celui de Jupiter et la masse un huitième de celle du Soleil."
+      },
+      {
+        "id": 14,
+        "question": "Quel cercle représente la trajectoire annuelle du Soleil vue de la Terre ?",
+        "propositions": [
+          "Écliptique",
+          "Solstice",
+          "Équinoxe",
+          "Zodiaque"
+        ],
+        "réponse": "Écliptique",
+        "anecdote": "Le point sur l'écliptique le plus au nord de l'équateur céleste s'appelle solstice d'été (nord) et solstice d'hiver (austral)."
+      },
+      {
+        "id": 15,
+        "question": "Quelles lois décrivent le mouvement des planètes autour du Soleil ?",
+        "propositions": [
+          "Lois de Cassini",
+          "Lois de Fick",
+          "Lois de Bragg",
+          "Lois de Kepler"
+        ],
+        "réponse": "Lois de Kepler",
+        "anecdote": "Elles ont été découvertes par Johannes Kepler à partir des mesures de la position des planètes faites par Tycho Brahe."
+      },
+      {
+        "id": 16,
+        "question": "Quel satellite fut le premier à envoyer une image de la Terre prise de l'espace ?",
+        "propositions": [
+          "Pioneer 5",
+          "Mariner 2",
+          "Explorer 6",
+          "Orbiter 3"
+        ],
+        "réponse": "Explorer 6",
+        "anecdote": "Ce petit satellite sphérique était désigné à étudier des radiations énergétiques ainsi que la radio propagation dans l'atmosphère."
+      },
+      {
+        "id": 17,
+        "question": "Quel astronome moderne a développé et défendu la théorie de l'héliocentrisme ?",
+        "propositions": [
+          "Tycho Brahe",
+          "Johannes Kepler",
+          "Edmond Halley",
+          "Nicolas Copernic"
+        ],
+        "réponse": "Nicolas Copernic",
+        "anecdote": "Les conséquences de cette théorie dans le changement profond de ses points de vue sont baptisées révolution copernicienne."
+      },
+      {
+        "id": 18,
+        "question": "Laquelle de ces planètes ne fait pas partie du Système solaire interne ?",
+        "propositions": [
+          "Mars",
+          "Vénus",
+          "Mercure",
+          "Saturne"
+        ],
+        "réponse": "Saturne",
+        "anecdote": "Le Système solaire interne, dont fait partie la Terre, désigne la région située entre le Soleil et la ceinture d'astéroïdes."
+      },
+      {
+        "id": 19,
+        "question": "Quelle sonde fut la première à survoler Vénus en 1962 ?",
+        "propositions": [
+          "Pioneer 5",
+          "Orbiter 3",
+          "Mariner 2",
+          "Explorer 6"
+        ],
+        "réponse": "Mariner 2",
+        "anecdote": "Au terme de 3 mois et demi de voyage, elle survole Venus, devenant ainsi la première sonde à survoler une planète autre que la Terre."
+      },
+      {
+        "id": 20,
+        "question": "Quelle planète doit son nom au dieu du commerce et du voyage ?",
+        "propositions": [
+          "Vénus",
+          "Mercure",
+          "Mars",
+          "Jupiter"
+        ],
+        "réponse": "Mercure",
+        "anecdote": "Mercure est la planète la plus proche du Soleil ainsi que la plus petite et la moins massive, avec plus du vingtième de la masse terrestre."
+      }
+    ],
+    "expert": [
+      {
+        "id": 21,
+        "question": "Quelle est la planète la plus chaude du Système solaire ?",
+        "propositions": [
+          "Mercure",
+          "Vénus",
+          "Saturne",
+          "Uranus"
+        ],
+        "réponse": "Vénus",
+        "anecdote": "Sa température de surface (462°C) est maintenue par l'effet de serre causé par son atmosphère riche en gaz carbonique."
+      },
+      {
+        "id": 22,
+        "question": "Quels petits corps sont composés de roches et de minéraux métalliques ?",
+        "propositions": [
+          "Astéroïdes",
+          "Anneaux",
+          "Comètes",
+          "Météores"
+        ],
+        "réponse": "Astéroïdes",
+        "anecdote": "La ceinture d'astéroïdes occupe une orbite située entre Mars et Jupiter, à une distance comprise entre 2,3 et 3,3 UA du Soleil."
+      },
+      {
+        "id": 23,
+        "question": "Combien de satellites naturels connus appartiennent au Système solaire ?",
+        "propositions": [
+          "345",
+          "175",
+          "235",
+          "495"
+        ],
+        "réponse": "175",
+        "anecdote": "Ces objets sont en orbite autour des planètes, des planètes naines et des petits corps du Système solaire plutôt qu'autour du Soleil."
+      },
+      {
+        "id": 24,
+        "question": "Quel nom a-t-on donné à la limite magnétique du Système solaire ?",
+        "propositions": [
+          "Héliozone",
+          "Héliogaine",
+          "Héliopause",
+          "Héliosphère"
+        ],
+        "réponse": "Héliopause",
+        "anecdote": "Lorsque des particules émises par le Soleil entrent en collision avec les particules interstellaires, elles émettent de l'énergie."
+      },
+      {
+        "id": 25,
+        "question": "Quel nuage contiendrait des milliards de noyaux cométaires stables ?",
+        "propositions": [
+          "Nuage de Planck",
+          "Nuage de Dalton",
+          "Nuage de Oort",
+          "Nuage de Graham"
+        ],
+        "réponse": "Nuage de Oort",
+        "anecdote": "On l'appelle parfois le nuage externe, par opposition avec le nuage de Hills qui porte le nom du scientifique qui l'a mis en évidence."
+      },
+      {
+        "id": 26,
+        "question": "Quelle est la plus petite planète naine reconnue du Système solaire ?",
+        "propositions": [
+          "Cérès",
+          "Charon",
+          "Hauméa",
+          "Makémaké"
+        ],
+        "réponse": "Cérès",
+        "anecdote": "Seule planète naine située dans la ceinture d'astéroïdes, Cérès fut découverte le 1er janvier 1801 par Giuseppe Piazzi."
+      },
+      {
+        "id": 27,
+        "question": "Quel phénomène résulte de l'implosion d'une étoile en fin de vie ?",
+        "propositions": [
+          "Supernova",
+          "Étoile noire",
+          "Apex",
+          "Pulsar"
+        ],
+        "réponse": "Supernova",
+        "anecdote": "Les supernovas sont des événements rares à l'échelle humaine: leur taux est estimé à environ une à trois par siècle dans la Voie lactée."
+      },
+      {
+        "id": 28,
+        "question": "Quelle hypothétique planète orbiterait entre le Soleil et Mercure ?",
+        "propositions": [
+          "Thémis",
+          "Gravastar",
+          "Vulcain",
+          "Tiamat"
+        ],
+        "réponse": "Vulcain",
+        "anecdote": "Dans l'univers de fiction de « Star Trek », les Vulcains sont originaires de la planète du même nom située dans le Quadrant Beta."
+      },
+      {
+        "id": 29,
+        "question": "Situé sur Mars, quel est le plus massif des volcans du Système solaire ?",
+        "propositions": [
+          "Olympus Mons",
+          "Nili Patera",
+          "Biblis Tholus",
+          "Victoria"
+        ],
+        "réponse": "Olympus Mons",
+        "anecdote": "Olympus Mons est le plus haut relief connu du système solaire avec 21.229 mètres au-dessus du niveau de référence martien."
+      },
+      {
+        "id": 30,
+        "question": "Quelle planète externe possède quatre satellites galiléens ?",
+        "propositions": [
+          "Jupiter",
+          "Mars",
+          "Saturne",
+          "Uranus"
+        ],
+        "réponse": "Jupiter",
+        "anecdote": "Découverts par l'astronome italien Galilée, Ganymède, Callisto, Io et Europe présentent des similarités avec les planètes telluriques."
+      }
+    ]
+    },
+    "en": {
+      "débutant": [
+      {
+        "id": 1,
+        "question": "What is the largest star present in our Solar System ?",
+        "propositions": [
+          "Rhea",
+          "Oberon",
+          "Sun",
+          "Juno"
+        ],
+        "réponse": "Sun",
+        "anecdote": "The Sun represents about 99% of the mass of the Solar System thus constituted, Jupiter representing more than two thirds of the rest."
+      },
+      {
+        "id": 2,
+        "question": "How many confirmed planets orbit the Sun ?",
+        "propositions": [
+          "New",
+          "Seven",
+          "Four",
+          "Eight"
+        ],
+        "réponse": "Eight",
+        "anecdote": "The semi-major axis of the Earth's orbit around the Sun is the original definition of the astronomical unit (au)."
+      },
+      {
+        "id": 3,
+        "question": "Which belt is made up of at least three dwarf planets, including Pluto ?",
+        "propositions": [
+          "Belt of Chiron",
+          "Kuiper Belt",
+          "Belt of Rhea",
+          "Belt of Callisto"
+        ],
+        "réponse": "Kuiper Belt",
+        "anecdote": "This ring-shaped area is similar to the asteroid belt, but larger and 200 times more massive."
+      },
+      {
+        "id": 4,
+        "question": "What is the main celestial body in the Solar System ?",
+        "propositions": [
+          "Earth",
+          "Sun",
+          "Moon",
+          "Pluto"
+        ],
+        "réponse": "Sun",
+        "anecdote": "This G2-type yellow dwarf main-sequence star contains 99% of all known mass in the Solar System."
+      },
+      {
+        "id": 5,
+        "question": "What is the best known of all the comets in the Solar System ?",
+        "propositions": [
+          "borelly",
+          "haley",
+          "Enke",
+          "Wild 2"
+        ],
+        "réponse": "haley",
+        "anecdote": "We know a lot more about Comet Halley since the Giotto probe, launched in 1985, probed its heart."
+      },
+      {
+        "id": 6,
+        "question": "Which Soviet cosmonaut was the first human being to orbit the Earth ?",
+        "propositions": [
+          "Vladimir Komarov",
+          "Guerman Titov",
+          "Youri Gagarine",
+          "Grigori Nelyubov"
+        ],
+        "réponse": "Youri Gagarine",
+        "anecdote": "The first man to walk on the Moon was American astronaut Neil Armstrong, who landed on the Moon on July 21, 1969."
+      },
+      {
+        "id": 7,
+        "question": "What is the densest inner planet in the Solar System ?",
+        "propositions": [
+          "Jupiter",
+          "Saturn",
+          "Mercury",
+          "Earth"
+        ],
+        "réponse": "Earth",
+        "anecdote": "Its liquid hydrosphere is unique among terrestrial planets, and it is the only planet where tectonic activity has been observed."
+      },
+      {
+        "id": 8,
+        "question": "Which planet has two small natural satellites, Deimos and Phobos ?",
+        "propositions": [
+          "Jupiter",
+          "Venus",
+          "March",
+          "Mercury"
+        ],
+        "réponse": "March",
+        "anecdote": "Phobos' orbit is shrinking and is expected to crash into Mars in 50 million years, as Deimos gradually recedes."
+      },
+      {
+        "id": 9,
+        "question": "Which planet is best known for its ring system ?",
+        "propositions": [
+          "Venus",
+          "Jupiter",
+          "Saturn",
+          "Mercury"
+        ],
+        "réponse": "Saturn",
+        "anecdote": "Saturn is a giant planet, just like Jupiter, Uranus and Neptune, and more precisely a gas giant."
+      },
+      {
+        "id": 10,
+        "question": "Of which galaxy is the Solar System an integral part ?",
+        "propositions": [
+          "Big Dog",
+          "M32",
+          "Milky Way",
+          "Little Dipper"
+        ],
+        "réponse": "Milky Way",
+        "anecdote": "The Milky Way is a barred spiral galaxy comprising 200 to 400 billion stars and at least 100 billion planets."
+      }
+    ],
+    "confirmé": [
+      {
+        "id": 11,
+        "question": "What category of planets do Mercury, Venus, Earth and Mars belong to ?",
+        "propositions": [
+          "Giantess",
+          "Telluric",
+          "Dwarfs",
+          "Carbonated"
+        ],
+        "réponse": "Telluric",
+        "anecdote": "A telluric planet is essentially composed of rocks and metal which generally has three concentric envelopes."
+      },
+      {
+        "id": 12,
+        "question": "What is the largest known object in the Kuiper Belt ?",
+        "propositions": [
+          "lempo",
+          "varuna",
+          "Orcus",
+          "Pluto"
+        ],
+        "réponse": "Pluto",
+        "anecdote": "Discovered in 1930 and considered a planet, Pluto was reclassified in 2006 when a definition of these bodies was adopted."
+      },
+      {
+        "id": 13,
+        "question": "What is the closest star to Earth after the Sun ?",
+        "propositions": [
+          "Ross 248",
+          "beaver",
+          "Proxima Centauri",
+          "Alpha Arae"
+        ],
+        "réponse": "Proxima Centauri",
+        "anecdote": "It is a red dwarf with a radius about one and a half times that of Jupiter and a mass one eighth that of the Sun."
+      },
+      {
+        "id": 14,
+        "question": "Which circle represents the annual path of the Sun as seen from Earth ?",
+        "propositions": [
+          "Solstice",
+          "Ecliptic",
+          "Zodiac",
+          "Equinox"
+        ],
+        "réponse": "Ecliptic",
+        "anecdote": "The point on the ecliptic furthest north of the celestial equator is called the summer solstice (north) and winter solstice (austral)."
+      },
+      {
+        "id": 15,
+        "question": "What laws describe the motion of the planets around the Sun ?",
+        "propositions": [
+          "Kepler's Laws",
+          "Bragg's Laws",
+          "Fick's Laws",
+          "Cassini's Laws"
+        ],
+        "réponse": "Kepler's Laws",
+        "anecdote": "They were discovered by Johannes Kepler from measurements of the position of the planets made by Tycho Brahe."
+      },
+      {
+        "id": 16,
+        "question": "Which satellite was the first to send an image of the Earth taken from space ?",
+        "propositions": [
+          "Mariner 2",
+          "Pioneer 5",
+          "Orbit 3",
+          "Explore 6"
+        ],
+        "réponse": "Explore 6",
+        "anecdote": "This small spherical satellite was designed to study energetic radiation as well as radio propagation in the atmosphere."
+      },
+      {
+        "id": 17,
+        "question": "What modern astronomer developed and defended the theory of heliocentrism ?",
+        "propositions": [
+          "Johannes Kepler",
+          "Tycho Brahe",
+          "Edmond Halley",
+          "Nicolaus Copernicus"
+        ],
+        "réponse": "Nicolaus Copernicus",
+        "anecdote": "The consequences of this theory in the profound change of points of view that it imposes are called the Copernican revolution."
+      },
+      {
+        "id": 18,
+        "question": "Which of these planets is not part of the inner solar system ?",
+        "propositions": [
+          "March",
+          "Mercury",
+          "Venus",
+          "Saturn"
+        ],
+        "réponse": "Saturn",
+        "anecdote": "The inner Solar System, of which the Earth is a part, refers to the region between the Sun and the asteroid belt."
+      },
+      {
+        "id": 19,
+        "question": "Which probe was the first to fly over Venus in 1962 ?",
+        "propositions": [
+          "Mariner 2",
+          "Explore 6",
+          "Orbit 3",
+          "Pioneer 5"
+        ],
+        "réponse": "Mariner 2",
+        "anecdote": "After 3.5 months of travel, it flies over Venus, thus becoming the first probe to fly over a planet other than Earth."
+      },
+      {
+        "id": 20,
+        "question": "Which planet owes its name to the god of trade and travel ?",
+        "propositions": [
+          "Mercury",
+          "Jupiter",
+          "March",
+          "Venus"
+        ],
+        "réponse": "Mercury",
+        "anecdote": "Mercury is the closest planet to the Sun as well as the smallest and least massive, with more than one-twentieth the mass of Earth."
+      }
+    ],
+    "expert": [
+      {
+        "id": 21,
+        "question": "What is the hottest planet in the Solar System ?",
+        "propositions": [
+          "Mercury",
+          "Uranus",
+          "Saturn",
+          "Venus"
+        ],
+        "réponse": "Venus",
+        "anecdote": "Its surface temperature (462°C) is maintained by the greenhouse effect caused by its carbon dioxide-rich atmosphere."
+      },
+      {
+        "id": 22,
+        "question": "What small bodies are composed of rocks and metallic minerals ?",
+        "propositions": [
+          "Rings",
+          "Meteors",
+          "Comets",
+          "Asteroids"
+        ],
+        "réponse": "Asteroids",
+        "anecdote": "The asteroid belt occupies an orbit between Mars and Jupiter, at a distance of between 2.3 and 3.3 AU from the Sun."
+      },
+      {
+        "id": 23,
+        "question": "How many known natural satellites belong to the Solar System ?",
+        "propositions": [
+          "235",
+          "345",
+          "495",
+          "175"
+        ],
+        "réponse": "175",
+        "anecdote": "These objects orbit planets, dwarf planets and small bodies in the Solar System rather than around the Sun."
+      },
+      {
+        "id": 24,
+        "question": "What name was given to the magnetic boundary of the Solar System ?",
+        "propositions": [
+          "Heliopause",
+          "Heliosheath",
+          "Heliozone",
+          "Heliosphere"
+        ],
+        "réponse": "Heliopause",
+        "anecdote": "When particles emitted by the Sun collide with interstellar particles, they emit energy."
+      },
+      {
+        "id": 25,
+        "question": "Which cloud would contain billions of stable cometary nuclei ?",
+        "propositions": [
+          "Oort cloud",
+          "Dalton Cloud",
+          "Planck cloud",
+          "Graham's Cloud"
+        ],
+        "réponse": "Oort cloud",
+        "anecdote": "It is sometimes called the outer cloud, as opposed to the Hills cloud which is named after the scientist who discovered it."
+      },
+      {
+        "id": 26,
+        "question": "What is the smallest recognized dwarf planet in the Solar System ?",
+        "propositions": [
+          "Ceres",
+          "Charron",
+          "Haumea",
+          "Makemake"
+        ],
+        "réponse": "Ceres",
+        "anecdote": "The only dwarf planet located in the asteroid belt, Ceres was discovered on January 1, 1801 by Giuseppe Piazzi."
+      },
+      {
+        "id": 27,
+        "question": "What phenomenon results from the implosion of a star at the end of its life ?",
+        "propositions": [
+          "Supernova",
+          "peak",
+          "Black Star",
+          "pulsar"
+        ],
+        "réponse": "Supernova",
+        "anecdote": "Supernovae are rare events on a human scale : their rate is estimated at around one to three per century in the Milky Way."
+      },
+      {
+        "id": 28,
+        "question": "What hypothetical planet would orbit between the Sun and Mercury ?",
+        "propositions": [
+          "tiamate",
+          "Themis",
+          "Gravastar",
+          "Vulcan"
+        ],
+        "réponse": "Vulcan",
+        "anecdote": "In the fictional universe of « Star Trek », Vulcans are native to the planet of the same name located in the Beta Quadrant."
+      },
+      {
+        "id": 29,
+        "question": "Located on Mars, what is the most massive volcano in the Solar System ?",
+        "propositions": [
+          "Nili Patera",
+          "Biblis Tholus",
+          "Olympus Mons",
+          "Victoria"
+        ],
+        "réponse": "Olympus Mons",
+        "anecdote": "Olympus Mons is the highest known landform in the solar system at 21,229 meters above Martian baseline."
+      },
+      {
+        "id": 30,
+        "question": "Which outer planet has four Galilean satellites ?",
+        "propositions": [
+          "Uranus",
+          "Saturn",
+          "March",
+          "Jupiter"
+        ],
+        "réponse": "Jupiter",
+        "anecdote": "Discovered by the Italian astronomer Galileo, Ganymede, Callisto, Io and Europa have similarities with the telluric planets."
+      }
+    ]
+    },
+    "de": {
+      "débutant": [
+      {
+        "id": 1,
+        "question": "Was ist der größte Stern in unserem Sonnensystem ?",
+        "propositions": [
+          "Sonne",
+          "Rhea",
+          "Oberon",
+          "Juno"
+        ],
+        "réponse": "Sonne",
+        "anecdote": "Die Sonne stellt etwa 99 % der Masse des so gebildeten Sonnensystems dar, Jupiter mehr als zwei Drittel des Rests."
+      },
+      {
+        "id": 2,
+        "question": "Wie viele bestätigte Planeten umkreisen die Sonne ?",
+        "propositions": [
+          "Sieben",
+          "Acht",
+          "Vier",
+          "Neu"
+        ],
+        "réponse": "Acht",
+        "anecdote": "Die große Halbachse der Erdumlaufbahn um die Sonne ist die ursprüngliche Definition der astronomischen Einheit (au)."
+      },
+      {
+        "id": 3,
+        "question": "Welcher Gürtel besteht aus mindestens drei Zwergplaneten, einschließlich Pluto ?",
+        "propositions": [
+          "Gürtel von Chiron",
+          "Gürtel von Callisto",
+          "Kuipergürtel",
+          "Gürtel von Rhea"
+        ],
+        "réponse": "Kuipergürtel",
+        "anecdote": "Dieser ringförmige Bereich ähnelt dem Asteroidengürtel, ist aber größer und 200-mal massiver."
+      },
+      {
+        "id": 4,
+        "question": "Was ist der wichtigste Himmelskörper im Sonnensystem ?",
+        "propositions": [
+          "Pluto",
+          "Mond",
+          "Sonne",
+          "Erde"
+        ],
+        "réponse": "Sonne",
+        "anecdote": "Dieser Gelbe-Zwerg-Hauptreihenstern vom Typ G2 enthält 99 % der gesamten bekannten Masse im Sonnensystem."
+      },
+      {
+        "id": 5,
+        "question": "Was ist der bekannteste aller Kometen im Sonnensystem ?",
+        "propositions": [
+          "Wild 2",
+          "Enke",
+          "Haley",
+          "langweilig"
+        ],
+        "réponse": "Haley",
+        "anecdote": "Wir wissen viel mehr über den Kometen Halley, seit die Giotto-Sonde, die 1985 gestartet wurde, sein Herz untersuchte."
+      },
+      {
+        "id": 6,
+        "question": "Welcher sowjetische Kosmonaut umkreiste als erster Mensch die Erde ?",
+        "propositions": [
+          "Vladimir Komarov",
+          "Grigori Nelioubov",
+          "Guerman Titov",
+          "Youri Gagarine"
+        ],
+        "réponse": "Youri Gagarine",
+        "anecdote": "Der erste Mensch, der den Mond betrat, war der amerikanische Astronaut Neil Armstrong, der am 21. Juli 1969 auf dem Mond landete."
+      },
+      {
+        "id": 7,
+        "question": "Was ist der dichteste innere Planet im Sonnensystem ?",
+        "propositions": [
+          "Saturn",
+          "Erde",
+          "Jupiter",
+          "Merkur"
+        ],
+        "réponse": "Erde",
+        "anecdote": "Seine flüssige Hydrosphäre ist einzigartig unter den terrestrischen Planeten und es ist der einzige Planet, auf dem tektonische Aktivität beobachtet wurde."
+      },
+      {
+        "id": 8,
+        "question": "Welcher Planet hat zwei kleine natürliche Satelliten, Deimos und Phobos ?",
+        "propositions": [
+          "Venus",
+          "März",
+          "Merkur",
+          "Jupiter"
+        ],
+        "réponse": "März",
+        "anecdote": "Die Umlaufbahn von Phobos schrumpft und wird voraussichtlich in 50 Millionen Jahren auf den Mars stürzen, während Deimos allmählich zurückweicht."
+      },
+      {
+        "id": 9,
+        "question": "Welcher Planet ist am bekanntesten für sein Ringsystem ?",
+        "propositions": [
+          "Jupiter",
+          "Venus",
+          "Saturn",
+          "Merkur"
+        ],
+        "réponse": "Saturn",
+        "anecdote": "Saturn ist ein Riesenplanet, genau wie Jupiter, Uranus und Neptun, genauer gesagt ein Gasriese."
+      },
+      {
+        "id": 10,
+        "question": "Von welcher Galaxie ist das Sonnensystem ein integraler Bestandteil ?",
+        "propositions": [
+          "Milchstraße",
+          "Kleiner Wagen",
+          "Großer Hund",
+          "M32"
+        ],
+        "réponse": "Milchstraße",
+        "anecdote": "Die Milchstraße ist eine vergitterte Spiralgalaxie mit 200 bis 400 Milliarden Sternen und mindestens 100 Milliarden Planeten."
+      }
+    ],
+    "confirmé": [
+      {
+        "id": 11,
+        "question": "Zu welcher Kategorie von Planeten gehören Merkur, Venus, Erde und Mars ?",
+        "propositions": [
+          "Zwerge",
+          "Kohlensäure",
+          "Riesin",
+          "Tellur"
+        ],
+        "réponse": "Tellur",
+        "anecdote": "Ein tellurischer Planet besteht im Wesentlichen aus Gestein und Metall, das im Allgemeinen drei konzentrische Hüllen hat."
+      },
+      {
+        "id": 12,
+        "question": "Was ist das größte bekannte Objekt im Kuipergürtel ?",
+        "propositions": [
+          "Lempo",
+          "Varuna",
+          "Pluto",
+          "Orkus"
+        ],
+        "réponse": "Pluto",
+        "anecdote": "1930 entdeckt und als Planet betrachtet, wurde Pluto 2006 neu klassifiziert, als eine Definition dieser Körper angenommen wurde."
+      },
+      {
+        "id": 13,
+        "question": "Welcher Stern ist der Erde nach der Sonne am nächsten ?",
+        "propositions": [
+          "Roß 248",
+          "Biber",
+          "Alpha-Bereich",
+          "Proxima Centauri"
+        ],
+        "réponse": "Proxima Centauri",
+        "anecdote": "Es ist ein Roter Zwerg mit einem Radius von etwa dem Anderthalbfachen des Jupiters und einer Masse von einem Achtel der Sonne."
+      },
+      {
+        "id": 14,
+        "question": "Welcher Kreis stellt die Jahresbahn der Sonne von der Erde aus gesehen dar ?",
+        "propositions": [
+          "Ekliptik",
+          "Tagundnachtgleiche",
+          "Sonnenwende",
+          "Sternzeichen"
+        ],
+        "réponse": "Ekliptik",
+        "anecdote": "Der Punkt auf der Ekliptik, der am weitesten nördlich vom Himmelsäquator liegt, wird Sommersonnenwende (Nord) und Wintersonnenwende (Austral) genannt."
+      },
+      {
+        "id": 15,
+        "question": "Welche Gesetze beschreiben die Bewegung der Planeten um die Sonne ?",
+        "propositions": [
+          "Ficks Gesetze",
+          "Braggsche Gesetze",
+          "Cassinis Gesetze",
+          "Keplers Gesetze"
+        ],
+        "réponse": "Keplers Gesetze",
+        "anecdote": "Sie wurden von Johannes Kepler aus Messungen der Planetenposition von Tycho Brahe entdeckt."
+      },
+      {
+        "id": 16,
+        "question": "Welcher Satellit hat als erster ein aus dem All aufgenommenes Bild der Erde gesendet ?",
+        "propositions": [
+          "Pionier 5",
+          "Umlaufbahn 3",
+          "Entdecken Sie 6",
+          "Seemann 2"
+        ],
+        "réponse": "Entdecken Sie 6",
+        "anecdote": "Dieser kleine kugelförmige Satellit wurde entwickelt, um die energiereiche Strahlung sowie die Funkausbreitung in der Atmosphäre zu untersuchen."
+      },
+      {
+        "id": 17,
+        "question": "Welcher moderne Astronom hat die Theorie des Heliozentrismus entwickelt und verteidigt ?",
+        "propositions": [
+          "Johannes Kepler",
+          "Edmond Halley",
+          "Tycho Brahe",
+          "Nikolaus Kopernikus"
+        ],
+        "réponse": "Nikolaus Kopernikus",
+        "anecdote": "Die Folgen dieser Theorie in der tiefgreifenden Änderung der Standpunkte, die sie auferlegt, werden die kopernikanische Revolution genannt."
+      },
+      {
+        "id": 18,
+        "question": "Welcher dieser Planeten gehört nicht zum inneren Sonnensystem ?",
+        "propositions": [
+          "Venus",
+          "Saturn",
+          "März",
+          "Merkur"
+        ],
+        "réponse": "Saturn",
+        "anecdote": "Das innere Sonnensystem, zu dem die Erde gehört, bezeichnet die Region zwischen der Sonne und dem Asteroidengürtel."
+      },
+      {
+        "id": 19,
+        "question": "Welche Sonde überflog 1962 als erste die Venus ?",
+        "propositions": [
+          "Umlaufbahn 3",
+          "Seemann 2",
+          "Pionier 5",
+          "Entdecken Sie 6"
+        ],
+        "réponse": "Seemann 2",
+        "anecdote": "Nach 3,5 Monaten Reise überfliegt sie die Venus und ist damit die erste Sonde, die einen anderen Planeten als die Erde überfliegt."
+      },
+      {
+        "id": 20,
+        "question": "Welcher Planet verdankt seinen Namen dem Gott des Handels und des Reisens ?",
+        "propositions": [
+          "Merkur",
+          "Venus",
+          "März",
+          "Jupiter"
+        ],
+        "réponse": "Merkur",
+        "anecdote": "Merkur ist der sonnennächste Planet sowie der kleinste und am wenigsten massive, mit mehr als einem Zwanzigstel der Masse der Erde."
+      }
+    ],
+    "expert": [
+      {
+        "id": 21,
+        "question": "Was ist der heißeste Planet im Sonnensystem ?",
+        "propositions": [
+          "Saturn",
+          "Merkur",
+          "Uranos",
+          "Venus"
+        ],
+        "réponse": "Venus",
+        "anecdote": "Seine Oberflächentemperatur (462 °C) wird durch den Treibhauseffekt aufrechterhalten, der durch seine kohlendioxidreiche Atmosphäre verursacht wird."
+      },
+      {
+        "id": 22,
+        "question": "Welche kleinen Körper bestehen aus Steinen und metallischen Mineralien ?",
+        "propositions": [
+          "Ringe",
+          "Asteroiden",
+          "Kometen",
+          "Meteore"
+        ],
+        "réponse": "Asteroiden",
+        "anecdote": "Der Asteroidengürtel nimmt eine Umlaufbahn zwischen Mars und Jupiter ein, in einem Abstand zwischen 2,3 und 3,3 AE von der Sonne."
+      },
+      {
+        "id": 23,
+        "question": "Wie viele bekannte natürliche Satelliten gehören zum Sonnensystem ?",
+        "propositions": [
+          "495",
+          "345",
+          "235",
+          "175"
+        ],
+        "réponse": "175",
+        "anecdote": "Diese Objekte umkreisen Planeten, Zwergplaneten und kleine Körper im Sonnensystem und nicht um die Sonne."
+      },
+      {
+        "id": 24,
+        "question": "Wie wurde die magnetische Grenze des Sonnensystems genannt ?",
+        "propositions": [
+          "Helioseath",
+          "Heliozon",
+          "Heliosphäre",
+          "Heliopause"
+        ],
+        "réponse": "Heliopause",
+        "anecdote": "Wenn von der Sonne emittierte Teilchen mit interstellaren Teilchen kollidieren, geben sie Energie ab."
+      },
+      {
+        "id": 25,
+        "question": "Welche Wolke würde Milliarden stabiler Kometenkerne enthalten ?",
+        "propositions": [
+          "Dalton-Wolke",
+          "Grahams Wolke",
+          "Planck-Wolke",
+          "Oortsche Wolke"
+        ],
+        "réponse": "Oortsche Wolke",
+        "anecdote": "Sie wird manchmal als äußere Wolke bezeichnet, im Gegensatz zu der Hills-Wolke, die nach dem Wissenschaftler benannt ist, der sie entdeckt hat."
+      },
+      {
+        "id": 26,
+        "question": "Was ist der kleinste anerkannte Zwergplanet im Sonnensystem ?",
+        "propositions": [
+          "Haumea",
+          "Makemake",
+          "Ceres",
+          "Charon"
+        ],
+        "réponse": "Ceres",
+        "anecdote": "Ceres, der einzige Zwergplanet im Asteroidengürtel, wurde am 1. Januar 1801 von Giuseppe Piazzi entdeckt."
+      },
+      {
+        "id": 27,
+        "question": "Welches Phänomen entsteht durch die Implosion eines Sterns am Ende seines Lebens ?",
+        "propositions": [
+          "Spitze",
+          "Supernova",
+          "Schwarzer Stern",
+          "Pulsar"
+        ],
+        "réponse": "Supernova",
+        "anecdote": "Supernovae sind seltene Ereignisse im menschlichen Maßstab : Ihre Häufigkeit wird in der Milchstraße auf etwa ein bis drei pro Jahrhundert geschätzt."
+      },
+      {
+        "id": 28,
+        "question": "Welcher hypothetische Planet würde zwischen Sonne und Merkur kreisen ?",
+        "propositions": [
+          "Gravastern",
+          "Vulkan",
+          "Tiamat",
+          "Thema"
+        ],
+        "réponse": "Vulkan",
+        "anecdote": "Im fiktiven Universum von « Star Trek » sind Vulkanier auf dem gleichnamigen Planeten im Beta-Quadranten beheimatet."
+      },
+      {
+        "id": 29,
+        "question": "Was ist der massivste Vulkan im Sonnensystem auf dem Mars ?",
+        "propositions": [
+          "Viktoria",
+          "Olympus Mons",
+          "Nili Patera",
+          "Biblis Tholus"
+        ],
+        "réponse": "Olympus Mons",
+        "anecdote": "Olympus Mons ist mit 21.229 Metern über der Mars-Referenzebene die höchste bekannte Landform im Sonnensystem."
+      },
+      {
+        "id": 30,
+        "question": "Welcher äußere Planet hat vier Galileische Satelliten ?",
+        "propositions": [
+          "März",
+          "Saturn",
+          "Uranos",
+          "Jupiter"
+        ],
+        "réponse": "Jupiter",
+        "anecdote": "Entdeckt von dem italienischen Astronomen Galileo, Ganymed, Callisto, Io und Europa haben Ähnlichkeiten mit den tellurischen Planeten."
+      }
+    ]
+    },
+    "es": {
+      "débutant": [
+      {
+        "id": 1,
+        "question": "¿Cuál es la estrella más grande presente en nuestro Sistema Solar ?",
+        "propositions": [
+          "Rea",
+          "Oberón",
+          "Juno",
+          "sol"
+        ],
+        "réponse": "sol",
+        "anecdote": "El Sol representa alrededor del 99% de la masa del Sistema Solar así constituido, representando Júpiter más de dos tercios del resto."
+      },
+      {
+        "id": 2,
+        "question": "¿Cuántos planetas confirmados orbitan alrededor del Sol ?",
+        "propositions": [
+          "Siete",
+          "Ocho",
+          "Cuatro",
+          "Nuevo"
+        ],
+        "réponse": "Ocho",
+        "anecdote": "El semieje mayor de la órbita de la Tierra alrededor del Sol es la definición original de la unidad astronómica (au)."
+      },
+      {
+        "id": 3,
+        "question": "¿Qué cinturón está formado por al menos tres planetas enanos, incluido Plutón ?",
+        "propositions": [
+          "Cinturón de Calisto",
+          "Cinturón de Kuiper",
+          "Cinturón de Rea",
+          "Cinturón de Quirón"
+        ],
+        "réponse": "Cinturón de Kuiper",
+        "anecdote": "Esta área en forma de anillo es similar al cinturón de asteroides, pero más grande y 200 veces más masiva."
+      },
+      {
+        "id": 4,
+        "question": "¿Cuál es el principal cuerpo celeste del Sistema Solar ?",
+        "propositions": [
+          "sol",
+          "Luna",
+          "Tierra",
+          "Plutón"
+        ],
+        "réponse": "sol",
+        "anecdote": "Esta estrella de secuencia principal enana amarilla de tipo G2 contiene el 99% de toda la masa conocida en el Sistema Solar."
+      },
+      {
+        "id": 5,
+        "question": "¿Cuál es el más conocido de todos los cometas del Sistema Solar ?",
+        "propositions": [
+          "haley",
+          "Salvaje 2",
+          "Enke",
+          "borel"
+        ],
+        "réponse": "haley",
+        "anecdote": "Sabemos mucho más sobre el cometa Halley desde que la sonda Giotto, lanzada en 1985, sondeó su corazón."
+      },
+      {
+        "id": 6,
+        "question": "¿Qué cosmonauta soviético fue el primer ser humano en orbitar la Tierra ?",
+        "propositions": [
+          "Guerman Titov",
+          "Grigori Nelioubov",
+          "Youri Gagarine",
+          "Vladimir Komarov"
+        ],
+        "réponse": "Youri Gagarine",
+        "anecdote": "El primer hombre en caminar sobre la Luna fue el astronauta estadounidense Neil Armstrong, quien aterrizó en la Luna el 21 de julio de 1969."
+      },
+      {
+        "id": 7,
+        "question": "¿Cuál es el planeta interior más denso del Sistema Solar ?",
+        "propositions": [
+          "Saturno",
+          "Júpiter",
+          "Tierra",
+          "Mercurio"
+        ],
+        "réponse": "Tierra",
+        "anecdote": "Su hidrosfera líquida es única entre los planetas terrestres, y es el único planeta donde se ha observado actividad tectónica."
+      },
+      {
+        "id": 8,
+        "question": "¿Qué planeta tiene dos pequeños satélites naturales, Deimos y Phobos ?",
+        "propositions": [
+          "Mercurio",
+          "marzo",
+          "venus",
+          "Júpiter"
+        ],
+        "réponse": "marzo",
+        "anecdote": "La órbita de Fobos se está reduciendo y se espera que choque con Marte en 50 millones de años, a medida que Deimos retrocede gradualmente."
+      },
+      {
+        "id": 9,
+        "question": "¿Qué planeta es mejor conocido por su sistema de anillos ?",
+        "propositions": [
+          "venus",
+          "Mercurio",
+          "Júpiter",
+          "Saturno"
+        ],
+        "réponse": "Saturno",
+        "anecdote": "Saturno es un planeta gigante, como Júpiter, Urano y Neptuno, y más precisamente un gigante gaseoso."
+      },
+      {
+        "id": 10,
+        "question": "¿De qué galaxia es parte integral el Sistema Solar ?",
+        "propositions": [
+          "Cazo Pequeño",
+          "Perro grande",
+          "Vía Láctea",
+          "M32"
+        ],
+        "réponse": "Vía Láctea",
+        "anecdote": "La Vía Láctea es una galaxia espiral barrada que comprende de 200 a 400 mil millones de estrellas y al menos 100 mil millones de planetas."
+      }
+    ],
+    "confirmé": [
+      {
+        "id": 11,
+        "question": "¿A qué categoría de planetas pertenecen Mercurio, Venus, la Tierra y Marte ?",
+        "propositions": [
+          "Telúrico",
+          "giganta",
+          "Enanos",
+          "carbonatadas"
+        ],
+        "réponse": "Telúrico",
+        "anecdote": "Un planeta telúrico está compuesto esencialmente de rocas y metal que generalmente tiene tres envolturas concéntricas."
+      },
+      {
+        "id": 12,
+        "question": "¿Cuál es el objeto más grande conocido en el cinturón de Kuiper ?",
+        "propositions": [
+          "Plutón",
+          "varuña",
+          "lempo",
+          "Orco"
+        ],
+        "réponse": "Plutón",
+        "anecdote": "Plutón, descubierto en 1930 y considerado un planeta, fue reclasificado en 2006 cuando se adoptó una definición de estos cuerpos."
+      },
+      {
+        "id": 13,
+        "question": "¿Cuál es la estrella más cercana a la Tierra después del Sol ?",
+        "propositions": [
+          "alfa arae",
+          "castor",
+          "Próxima Centauro",
+          "rosa 248"
+        ],
+        "réponse": "Próxima Centauro",
+        "anecdote": "Es una enana roja con un radio de aproximadamente una vez y media el de Júpiter y una masa de un octavo de la del Sol."
+      },
+      {
+        "id": 14,
+        "question": "¿Qué círculo representa la trayectoria anual del Sol visto desde la Tierra ?",
+        "propositions": [
+          "Eclíptica",
+          "Zodíaco",
+          "solsticio",
+          "Equinoccio"
+        ],
+        "réponse": "Eclíptica",
+        "anecdote": "El punto de la eclíptica más al norte del ecuador celeste se denomina solsticio de verano (norte) y solsticio de invierno (austral)."
+      },
+      {
+        "id": 15,
+        "question": "¿Qué leyes describen el movimiento de los planetas alrededor del Sol ?",
+        "propositions": [
+          "Leyes de Cassini",
+          "Leyes de Fick",
+          "Leyes de Bragg",
+          "Leyes de Kepler"
+        ],
+        "réponse": "Leyes de Kepler",
+        "anecdote": "Fueron descubiertos por Johannes Kepler a partir de mediciones de la posición de los planetas realizadas por Tycho Brahe."
+      },
+      {
+        "id": 16,
+        "question": "¿Qué satélite fue el primero en enviar una imagen de la Tierra tomada desde el espacio ?",
+        "propositions": [
+          "Explorar 6",
+          "Órbita 3",
+          "pionero 5",
+          "Marinero 2"
+        ],
+        "réponse": "Explorar 6",
+        "anecdote": "Este pequeño satélite esférico fue diseñado para estudiar la radiación energética y la propagación de radio en la atmósfera."
+      },
+      {
+        "id": 17,
+        "question": "¿Qué astrónomo moderno desarrolló y defendió la teoría del heliocentrismo ?",
+        "propositions": [
+          "Juan Kepler",
+          "Edmundo Halley",
+          "Tycho Brahe",
+          "Nicolás Copérnico"
+        ],
+        "réponse": "Nicolás Copérnico",
+        "anecdote": "Las consecuencias de esta teoría en el profundo cambio de puntos de vista que impone se denominan revolución copernicana."
+      },
+      {
+        "id": 18,
+        "question": "¿Cuál de estos planetas no es parte del sistema solar interior ?",
+        "propositions": [
+          "Mercurio",
+          "venus",
+          "Saturno",
+          "marzo"
+        ],
+        "réponse": "Saturno",
+        "anecdote": "El Sistema Solar interior, del cual forma parte la Tierra, se refiere a la región entre el Sol y el cinturón de asteroides."
+      },
+      {
+        "id": 19,
+        "question": "¿Qué sonda fue la primera en sobrevolar Venus en 1962 ?",
+        "propositions": [
+          "pionero 5",
+          "Explorar 6",
+          "Marinero 2",
+          "Órbita 3"
+        ],
+        "réponse": "Marinero 2",
+        "anecdote": "Después de 3,5 meses de viaje, sobrevuela Venus, convirtiéndose así en la primera sonda en sobrevolar un planeta que no sea la Tierra."
+      },
+      {
+        "id": 20,
+        "question": "¿Qué planeta debe su nombre al dios del comercio y los viajes ?",
+        "propositions": [
+          "venus",
+          "Júpiter",
+          "marzo",
+          "Mercurio"
+        ],
+        "réponse": "Mercurio",
+        "anecdote": "Mercurio es el planeta más cercano al Sol, así como el más pequeño y menos masivo, con más de una vigésima parte de la masa de la Tierra."
+      }
+    ],
+    "expert": [
+      {
+        "id": 21,
+        "question": "¿Cuál es el planeta más caliente del Sistema Solar ?",
+        "propositions": [
+          "Mercurio",
+          "venus",
+          "Urano",
+          "Saturno"
+        ],
+        "réponse": "venus",
+        "anecdote": "Su temperatura superficial (462°C) se mantiene por el efecto invernadero provocado por su atmósfera rica en dióxido de carbono."
+      },
+      {
+        "id": 22,
+        "question": "¿Qué cuerpos pequeños están compuestos de rocas y minerales metálicos ?",
+        "propositions": [
+          "Meteoritos",
+          "Anillos",
+          "Asteroides",
+          "Cometas"
+        ],
+        "réponse": "Asteroides",
+        "anecdote": "El cinturón de asteroides ocupa una órbita entre Marte y Júpiter, a una distancia de entre 2,3 y 3,3 UA del Sol."
+      },
+      {
+        "id": 23,
+        "question": "¿Cuántos satélites naturales conocidos pertenecen al Sistema Solar ?",
+        "propositions": [
+          "345",
+          "495",
+          "175",
+          "235"
+        ],
+        "réponse": "175",
+        "anecdote": "Estos objetos orbitan planetas, planetas enanos y cuerpos pequeños en el Sistema Solar en lugar de alrededor del Sol."
+      },
+      {
+        "id": 24,
+        "question": "¿Qué nombre se le dio al límite magnético del Sistema Solar ?",
+        "propositions": [
+          "Heliopausa",
+          "Heliozona",
+          "Heliosfera",
+          "Heliovaina"
+        ],
+        "réponse": "Heliopausa",
+        "anecdote": "Cuando las partículas emitidas por el Sol chocan con las partículas interestelares, emiten energía."
+      },
+      {
+        "id": 25,
+        "question": "¿Qué nube contendría miles de millones de núcleos cometarios estables ?",
+        "propositions": [
+          "Nube de Dalton",
+          "Nube de Planck",
+          "Nube de Graham",
+          "Nube de Oort"
+        ],
+        "réponse": "Nube de Oort",
+        "anecdote": "A veces se le llama la nube exterior, a diferencia de la nube de Hills, que lleva el nombre del científico que la descubrió."
+      },
+      {
+        "id": 26,
+        "question": "¿Cuál es el planeta enano más pequeño reconocido en el Sistema Solar ?",
+        "propositions": [
+          "Ceres",
+          "Hacerhacer",
+          "Charrón",
+          "haumea"
+        ],
+        "réponse": "Ceres",
+        "anecdote": "El único planeta enano ubicado en el cinturón de asteroides, Ceres fue descubierto el 1 de enero de 1801 por Giuseppe Piazzi."
+      },
+      {
+        "id": 27,
+        "question": "¿Qué fenómeno resulta de la implosión de una estrella al final de su vida ?",
+        "propositions": [
+          "supernova",
+          "pico",
+          "púlsar",
+          "estrella negra"
+        ],
+        "réponse": "supernova",
+        "anecdote": "Las supernovas son eventos raros a escala humana : su tasa se estima en alrededor de uno a tres por siglo en la Vía Láctea."
+      },
+      {
+        "id": 28,
+        "question": "¿Qué planeta hipotético orbitaría entre el Sol y Mercurio ?",
+        "propositions": [
+          "Temis",
+          "tiamato",
+          "Vulcano",
+          "Gravestar"
+        ],
+        "réponse": "Vulcano",
+        "anecdote": "En el universo ficticio de « Star Trek », los vulcanos son nativos del planeta del mismo nombre ubicado en el Cuadrante Beta."
+      },
+      {
+        "id": 29,
+        "question": "Ubicado en Marte, ¿cuál es el volcán más masivo del Sistema Solar ?",
+        "propositions": [
+          "vitoria",
+          "Nili Pátera",
+          "Monte Olimpo",
+          "Biblia Tholus"
+        ],
+        "réponse": "Monte Olimpo",
+        "anecdote": "Olympus Mons es la forma de relieve más alta conocida en el sistema solar a 21.229 metros sobre el nivel de referencia marciano."
+      },
+      {
+        "id": 30,
+        "question": "¿Qué planeta exterior tiene cuatro satélites galileanos ?",
+        "propositions": [
+          "Júpiter",
+          "Saturno",
+          "Urano",
+          "marzo"
+        ],
+        "réponse": "Júpiter",
+        "anecdote": "Descubiertos por el astrónomo italiano Galileo, Ganímedes, Calisto, Io y Europa tienen similitudes con los planetas telúricos."
+      }
+    ]
+    },
+    "it": {
+      "débutant": [
+      {
+        "id": 1,
+        "question": "Qual è la stella più grande presente nel nostro Sistema Solare ?",
+        "propositions": [
+          "Oberone",
+          "Sole",
+          "Giunone",
+          "Rea"
+        ],
+        "réponse": "Sole",
+        "anecdote": "Il Sole rappresenta circa il 99% della massa del Sistema Solare così costituito, Giove rappresenta più di due terzi del resto."
+      },
+      {
+        "id": 2,
+        "question": "Quanti pianeti confermati orbitano attorno al Sole ?",
+        "propositions": [
+          "Nuovo",
+          "Sette",
+          "Quattro",
+          "Otto"
+        ],
+        "réponse": "Otto",
+        "anecdote": "Il semiasse maggiore dell'orbita terrestre attorno al Sole è la definizione originale dell'unità astronomica (au)."
+      },
+      {
+        "id": 3,
+        "question": "Quale fascia è formata da almeno tre pianeti nani, compreso Plutone ?",
+        "propositions": [
+          "Cintura di Rea",
+          "Cintura di Callisto",
+          "Cintura di Kuiper",
+          "Cintura di Chirone"
+        ],
+        "réponse": "Cintura di Kuiper",
+        "anecdote": "Quest'area a forma di anello è simile alla fascia degli asteroidi, ma più grande e 200 volte più massiccia."
+      },
+      {
+        "id": 4,
+        "question": "Qual è il principale corpo celeste del Sistema Solare ?",
+        "propositions": [
+          "Plutone",
+          "Sole",
+          "Luna",
+          "Terra"
+        ],
+        "réponse": "Sole",
+        "anecdote": "Questa nana gialla di sequenza principale di tipo G2 contiene il 99% di tutta la massa conosciuta nel Sistema Solare."
+      },
+      {
+        "id": 5,
+        "question": "Qual è la più conosciuta di tutte le comete del Sistema Solare ?",
+        "propositions": [
+          "Enke",
+          "Selvaggio 2",
+          "borely",
+          "haley"
+        ],
+        "réponse": "haley",
+        "anecdote": "Sappiamo molto di più sulla cometa di Halley da quando la sonda Giotto, lanciata nel 1985, ne ha sondato il cuore."
+      },
+      {
+        "id": 6,
+        "question": "Quale cosmonauta sovietico è stato il primo essere umano ad orbitare attorno alla Terra ?",
+        "propositions": [
+          "Grigori Nelioubov",
+          "Vladimir Komarov",
+          "Youri Gagarine",
+          "Guerman Titov"
+        ],
+        "réponse": "Youri Gagarine",
+        "anecdote": "Il primo uomo a camminare sulla Luna fu l'astronauta americano Neil Armstrong, che atterrò sulla Luna il 21 luglio 1969."
+      },
+      {
+        "id": 7,
+        "question": "Qual è il pianeta interno più denso del Sistema Solare ?",
+        "propositions": [
+          "Mercurio",
+          "Giove",
+          "Terra",
+          "Saturno"
+        ],
+        "réponse": "Terra",
+        "anecdote": "La sua idrosfera liquida è unica tra i pianeti terrestri ed è l'unico pianeta in cui è stata osservata attività tettonica."
+      },
+      {
+        "id": 8,
+        "question": "Quale pianeta ha due piccoli satelliti naturali, Deimos e Phobos ?",
+        "propositions": [
+          "Venere",
+          "Mercurio",
+          "marzo",
+          "Giove"
+        ],
+        "réponse": "marzo",
+        "anecdote": "L'orbita di Phobos si sta restringendo e si prevede che si schianterà su Marte tra 50 milioni di anni, man mano che Deimos si ritirerà gradualmente."
+      },
+      {
+        "id": 9,
+        "question": "Quale pianeta è meglio conosciuto per il suo sistema di anelli ?",
+        "propositions": [
+          "Mercurio",
+          "Venere",
+          "Saturno",
+          "Giove"
+        ],
+        "réponse": "Saturno",
+        "anecdote": "Saturno è un pianeta gigante, proprio come Giove, Urano e Nettuno, e più precisamente un gigante gassoso."
+      },
+      {
+        "id": 10,
+        "question": "Di quale galassia è parte integrante il Sistema Solare ?",
+        "propositions": [
+          "Grande cane",
+          "Piccolo Carro",
+          "M32",
+          "Via Lattea"
+        ],
+        "réponse": "Via Lattea",
+        "anecdote": "La Via Lattea è una galassia a spirale barrata che comprende da 200 a 400 miliardi di stelle e almeno 100 miliardi di pianeti."
+      }
+    ],
+    "confirmé": [
+      {
+        "id": 11,
+        "question": "A quale categoria di pianeti appartengono Mercurio, Venere, Terra e Marte ?",
+        "propositions": [
+          "Tellurico",
+          "Carbonato",
+          "Gigantessa",
+          "Nani"
+        ],
+        "réponse": "Tellurico",
+        "anecdote": "Un pianeta tellurico è essenzialmente composto da rocce e metallo che generalmente ha tre involucri concentrici."
+      },
+      {
+        "id": 12,
+        "question": "Qual è l'oggetto più grande conosciuto nella fascia di Kuiper ?",
+        "propositions": [
+          "lembo",
+          "varuna",
+          "Orco",
+          "Plutone"
+        ],
+        "réponse": "Plutone",
+        "anecdote": "Scoperto nel 1930 e considerato un pianeta, Plutone è stato riclassificato nel 2006 quando è stata adottata una definizione di questi corpi."
+      },
+      {
+        "id": 13,
+        "question": "Qual è la stella più vicina alla Terra dopo il Sole ?",
+        "propositions": [
+          "castoro",
+          "Alpha Arae",
+          "Ross 248",
+          "Prossima Centauri"
+        ],
+        "réponse": "Prossima Centauri",
+        "anecdote": "È una nana rossa con un raggio circa una volta e mezzo quello di Giove e una massa un ottavo di quella del Sole."
+      },
+      {
+        "id": 14,
+        "question": "Quale cerchio rappresenta il percorso annuale del Sole visto dalla Terra ?",
+        "propositions": [
+          "Equinozio",
+          "Eclittica",
+          "Solstizio",
+          "Zodiaco"
+        ],
+        "réponse": "Eclittica",
+        "anecdote": "Il punto sull'eclittica più a nord dell'equatore celeste è chiamato solstizio d'estate (nord) e solstizio d'inverno (australe)."
+      },
+      {
+        "id": 15,
+        "question": "Quali leggi descrivono il moto dei pianeti attorno al Sole ?",
+        "propositions": [
+          "Le leggi di Keplero",
+          "Le leggi di Bragg",
+          "Leggi di Cassini",
+          "Le leggi di Fick"
+        ],
+        "réponse": "Le leggi di Keplero",
+        "anecdote": "Sono stati scoperti da Johannes Kepler dalle misurazioni della posizione dei pianeti effettuate da Tycho Brahe."
+      },
+      {
+        "id": 16,
+        "question": "Quale satellite è stato il primo a inviare un'immagine della Terra presa dallo spazio ?",
+        "propositions": [
+          "Esplora 6",
+          "Pioniere 5",
+          "Orbita 3",
+          "Marinaio 2"
+        ],
+        "réponse": "Esplora 6",
+        "anecdote": "Questo piccolo satellite sferico è stato progettato per studiare la radiazione energetica e la propagazione radio nell'atmosfera."
+      },
+      {
+        "id": 17,
+        "question": "Quale astronomo moderno ha sviluppato e difeso la teoria dell'eliocentrismo ?",
+        "propositions": [
+          "Edmond Halley",
+          "Giovanni Keplero",
+          "Tycho Brahe",
+          "Niccolò Copernico"
+        ],
+        "réponse": "Niccolò Copernico",
+        "anecdote": "Le conseguenze di questa teoria nel profondo cambiamento di punti di vista che essa impone si chiamano rivoluzione copernicana."
+      },
+      {
+        "id": 18,
+        "question": "Quale di questi pianeti non fa parte del sistema solare interno ?",
+        "propositions": [
+          "Venere",
+          "marzo",
+          "Mercurio",
+          "Saturno"
+        ],
+        "réponse": "Saturno",
+        "anecdote": "Il Sistema Solare interno, di cui fa parte la Terra, si riferisce alla regione tra il Sole e la fascia degli asteroidi."
+      },
+      {
+        "id": 19,
+        "question": "Quale sonda è stata la prima a sorvolare Venere nel 1962 ?",
+        "propositions": [
+          "Esplora 6",
+          "Orbita 3",
+          "Pioniere 5",
+          "Marinaio 2"
+        ],
+        "réponse": "Marinaio 2",
+        "anecdote": "Dopo 3,5 mesi di viaggio, sorvola Venere, diventando così la prima sonda a sorvolare un pianeta diverso dalla Terra."
+      },
+      {
+        "id": 20,
+        "question": "Quale pianeta deve il suo nome al dio del commercio e dei viaggi ?",
+        "propositions": [
+          "marzo",
+          "Giove",
+          "Mercurio",
+          "Venere"
+        ],
+        "réponse": "Mercurio",
+        "anecdote": "Mercurio è il pianeta più vicino al Sole, nonché il più piccolo e meno massiccio, con più di un ventesimo della massa della Terra."
+      }
+    ],
+    "expert": [
+      {
+        "id": 21,
+        "question": "Qual è il pianeta più caldo del Sistema Solare ?",
+        "propositions": [
+          "Saturno",
+          "Urano",
+          "Venere",
+          "Mercurio"
+        ],
+        "réponse": "Venere",
+        "anecdote": "La sua temperatura superficiale (462°C) è mantenuta dall'effetto serra causato dalla sua atmosfera ricca di anidride carbonica."
+      },
+      {
+        "id": 22,
+        "question": "Quali piccoli corpi sono composti da rocce e minerali metallici ?",
+        "propositions": [
+          "Meteore",
+          "Anelli",
+          "Comete",
+          "Asteroidi"
+        ],
+        "réponse": "Asteroidi",
+        "anecdote": "La fascia degli asteroidi occupa un'orbita tra Marte e Giove, a una distanza compresa tra 2,3 e 3,3 UA dal Sole."
+      },
+      {
+        "id": 23,
+        "question": "Quanti satelliti naturali conosciuti appartengono al Sistema Solare ?",
+        "propositions": [
+          "17",
+          "49",
+          "23",
+          "34"
+        ],
+        "réponse": "17",
+        "anecdote": "Questi oggetti orbitano attorno a pianeti, pianeti nani e piccoli corpi nel Sistema Solare piuttosto che attorno al Sole."
+      },
+      {
+        "id": 24,
+        "question": "Quale nome è stato dato al confine magnetico del Sistema Solare ?",
+        "propositions": [
+          "Heliosheath",
+          "Eliosfera",
+          "Eliozone",
+          "Eliopausa"
+        ],
+        "réponse": "Eliopausa",
+        "anecdote": "Quando le particelle emesse dal Sole si scontrano con le particelle interstellari, emettono energia."
+      },
+      {
+        "id": 25,
+        "question": "Quale nube conterrebbe miliardi di nuclei cometari stabili ?",
+        "propositions": [
+          "Nube di Dalton",
+          "Nuvola di Graham",
+          "Nube di Planck",
+          "Nuvola di Oort"
+        ],
+        "réponse": "Nuvola di Oort",
+        "anecdote": "A volte è chiamata la nuvola esterna, in contrasto con la nuvola di Hills che prende il nome dallo scienziato che l'ha scoperta."
+      },
+      {
+        "id": 26,
+        "question": "Qual è il più piccolo pianeta nano riconosciuto nel Sistema Solare ?",
+        "propositions": [
+          "Haumea",
+          "Charron",
+          "Cerere",
+          "Makemake"
+        ],
+        "réponse": "Cerere",
+        "anecdote": "L'unico pianeta nano situato nella fascia degli asteroidi, Cerere fu scoperto il 1 gennaio 1801 da Giuseppe Piazzi."
+      },
+      {
+        "id": 27,
+        "question": "Quale fenomeno risulta dall'implosione di una stella alla fine della sua vita ?",
+        "propositions": [
+          "Stella Nera",
+          "picco",
+          "Supernova",
+          "pulsar"
+        ],
+        "réponse": "Supernova",
+        "anecdote": "Le supernove sono eventi rari su scala umana : il loro tasso è stimato intorno a uno a tre per secolo nella Via Lattea."
+      },
+      {
+        "id": 28,
+        "question": "Quale ipotetico pianeta orbiterebbe tra il Sole e Mercurio ?",
+        "propositions": [
+          "tiamato",
+          "Vulcano",
+          "Gravastar",
+          "Temi"
+        ],
+        "réponse": "Vulcano",
+        "anecdote": "Nell'universo immaginario di « Star Trek », i Vulcaniani sono originari dell'omonimo pianeta situato nel Quadrante Beta."
+      },
+      {
+        "id": 29,
+        "question": "Situato su Marte, qual è il vulcano più massiccio del Sistema Solare ?",
+        "propositions": [
+          "Vittoria",
+          "Biblis Tolo",
+          "Monte Olimpo",
+          "Nili Patera"
+        ],
+        "réponse": "Monte Olimpo",
+        "anecdote": "Olympus Mons è la morfologia più alta conosciuta nel sistema solare a 21.229 metri sopra il livello di riferimento marziano."
+      },
+      {
+        "id": 30,
+        "question": "Quale pianeta esterno ha quattro satelliti galileiani ?",
+        "propositions": [
+          "marzo",
+          "Urano",
+          "Saturno",
+          "Giove"
+        ],
+        "réponse": "Giove",
+        "anecdote": "Scoperti dall'astronomo italiano Galileo, Ganimede, Callisto, Io ed Europa hanno somiglianze con i pianeti tellurici."
+      }
+    ]
+    },
+    "nl": {
+      "débutant": [
+      {
+        "id": 1,
+        "question": "Wat is de grootste aanwezige ster in ons zonnestelsel ?",
+        "propositions": [
+          "Rhea",
+          "zon",
+          "Juno",
+          "Oberon"
+        ],
+        "réponse": "zon",
+        "anecdote": "De zon vertegenwoordigt ongeveer 99% van de massa van het aldus gevormde zonnestelsel, Jupiter vertegenwoordigt meer dan tweederde van de rest."
+      },
+      {
+        "id": 2,
+        "question": "Hoeveel bevestigde planeten draaien er om de zon ?",
+        "propositions": [
+          "Acht",
+          "zeven",
+          "Nieuw",
+          "Vier"
+        ],
+        "réponse": "Acht",
+        "anecdote": "De halve hoofdas van de baan van de aarde rond de zon is de oorspronkelijke definitie van de astronomische eenheid (au)."
+      },
+      {
+        "id": 3,
+        "question": "Welke gordel bestaat uit ten minste drie dwergplaneten, waaronder Pluto ?",
+        "propositions": [
+          "Kuipergordel",
+          "Riem van Callisto",
+          "Riem van Rhea",
+          "Gordel van Cheiron"
+        ],
+        "réponse": "Kuipergordel",
+        "anecdote": "Dit ringvormige gebied lijkt op de asteroïdengordel, maar is groter en 200 keer zo massief."
+      },
+      {
+        "id": 4,
+        "question": "Wat is het belangrijkste hemellichaam in het zonnestelsel ?",
+        "propositions": [
+          "Maan",
+          "Aarde",
+          "Pluto",
+          "zon"
+        ],
+        "réponse": "zon",
+        "anecdote": "Deze hoofdreeksster van het G2-type gele dwerg bevat 99% van alle bekende massa in het zonnestelsel."
+      },
+      {
+        "id": 5,
+        "question": "Wat is de bekendste van alle kometen in het zonnestelsel ?",
+        "propositions": [
+          "hallo",
+          "Wilde 2",
+          "Enke",
+          "saai"
+        ],
+        "réponse": "hallo",
+        "anecdote": "We weten veel meer over komeet Halley sinds de Giotto-sonde, gelanceerd in 1985, zijn hart onderzocht."
+      },
+      {
+        "id": 6,
+        "question": "Welke Sovjet-kosmonaut was de eerste mens die in een baan om de aarde cirkelde ?",
+        "propositions": [
+          "Guerman Titov",
+          "Youri Gagarine",
+          "Vladimir Komarov",
+          "Grigori Nelioubov"
+        ],
+        "réponse": "Youri Gagarine",
+        "anecdote": "De eerste man die op de maan liep, was de Amerikaanse astronaut Neil Armstrong, die op 21 juli 1969 op de maan landde."
+      },
+      {
+        "id": 7,
+        "question": "Wat is de dichtste binnenplaneet in het zonnestelsel ?",
+        "propositions": [
+          "Aarde",
+          "Jupiter",
+          "Mercurius",
+          "Saturnus"
+        ],
+        "réponse": "Aarde",
+        "anecdote": "De vloeibare hydrosfeer is uniek onder terrestrische planeten en het is de enige planeet waar tektonische activiteit is waargenomen."
+      },
+      {
+        "id": 8,
+        "question": "Welke planeet heeft twee kleine natuurlijke satellieten, Deimos en Phobos ?",
+        "propositions": [
+          "Maart",
+          "Mercurius",
+          "Venus",
+          "Jupiter"
+        ],
+        "réponse": "Maart",
+        "anecdote": "De baan van Phobos krimpt en zal naar verwachting over 50 miljoen jaar op Mars botsen, naarmate Deimos zich geleidelijk terugtrekt."
+      },
+      {
+        "id": 9,
+        "question": "Welke planeet is vooral bekend om zijn ringsysteem ?",
+        "propositions": [
+          "Jupiter",
+          "Saturnus",
+          "Venus",
+          "Mercurius"
+        ],
+        "réponse": "Saturnus",
+        "anecdote": "Saturnus is een gigantische planeet, net als Jupiter, Uranus en Neptunus, en meer bepaald een gasreus."
+      },
+      {
+        "id": 10,
+        "question": "Van welk sterrenstelsel is het zonnestelsel een integraal onderdeel ?",
+        "propositions": [
+          "Grote hond",
+          "M32",
+          "Kleine Beer",
+          "Melkweg"
+        ],
+        "réponse": "Melkweg",
+        "anecdote": "De Melkweg is een balkspiraalstelsel met 200 tot 400 miljard sterren en minstens 100 miljard planeten."
+      }
+    ],
+    "confirmé": [
+      {
+        "id": 11,
+        "question": "Tot welke categorie planeten behoren Mercurius, Venus, Aarde en Mars ?",
+        "propositions": [
+          "Tellurisch",
+          "Koolzuurhoudend",
+          "Reuzin",
+          "Dwergen"
+        ],
+        "réponse": "Tellurisch",
+        "anecdote": "Een tellurische planeet is in wezen samengesteld uit rotsen en metaal die over het algemeen drie concentrische enveloppen heeft."
+      },
+      {
+        "id": 12,
+        "question": "Wat is het grootste bekende object in de Kuipergordel ?",
+        "propositions": [
+          "varuna",
+          "Pluto",
+          "Orkus",
+          "lepo"
+        ],
+        "réponse": "Pluto",
+        "anecdote": "Ontdekt in 1930 en beschouwd als een planeet, werd Pluto in 2006 opnieuw geclassificeerd toen een definitie van deze lichamen werd aangenomen."
+      },
+      {
+        "id": 13,
+        "question": "Wat is na de zon de ster die het dichtst bij de aarde staat ?",
+        "propositions": [
+          "bever",
+          "Alfa Arae",
+          "Ross 248",
+          "Proxima Centauri"
+        ],
+        "réponse": "Proxima Centauri",
+        "anecdote": "Het is een rode dwerg met een straal van ongeveer anderhalf keer die van Jupiter en een massa van een achtste van die van de zon."
+      },
+      {
+        "id": 14,
+        "question": "Welke cirkel stelt de jaarlijkse baan van de zon voor, gezien vanaf de aarde ?",
+        "propositions": [
+          "Ecliptica",
+          "Zonnewende",
+          "Dierenriem",
+          "equinox"
+        ],
+        "réponse": "Ecliptica",
+        "anecdote": "Het punt op de ecliptica dat het verst ten noorden van de hemelevenaar ligt, wordt de zomerzonnewende (noord) en de winterzonnewende (austral) genoemd."
+      },
+      {
+        "id": 15,
+        "question": "Welke wetten beschrijven de beweging van de planeten rond de zon ?",
+        "propositions": [
+          "Wetten van Cassini",
+          "Wetten van Kepler",
+          "Fick's wetten",
+          "De wetten van Bragg"
+        ],
+        "réponse": "Wetten van Kepler",
+        "anecdote": "Ze werden ontdekt door Johannes Kepler uit metingen van de positie van de planeten door Tycho Brahe."
+      },
+      {
+        "id": 16,
+        "question": "Welke satelliet stuurde als eerste een vanuit de ruimte genomen beeld van de aarde ?",
+        "propositions": [
+          "Pionier 5",
+          "Zeeman 2",
+          "Baan 3",
+          "Ontdek 6"
+        ],
+        "réponse": "Ontdek 6",
+        "anecdote": "Deze kleine bolvormige satelliet is ontworpen om zowel energetische straling als radiovoortplanting in de atmosfeer te bestuderen."
+      },
+      {
+        "id": 17,
+        "question": "Welke moderne astronoom ontwikkelde en verdedigde de theorie van het heliocentrisme ?",
+        "propositions": [
+          "Edmond Halley",
+          "Johannes Kepler",
+          "Tycho Brahe",
+          "Nicolaus Copernicus"
+        ],
+        "réponse": "Nicolaus Copernicus",
+        "anecdote": "De gevolgen van deze theorie in de diepgaande verandering van standpunten die ze oplegt, worden de Copernicaanse revolutie genoemd."
+      },
+      {
+        "id": 18,
+        "question": "Welke van deze planeten maakt geen deel uit van het binnenste zonnestelsel ?",
+        "propositions": [
+          "Maart",
+          "Venus",
+          "Saturnus",
+          "Mercurius"
+        ],
+        "réponse": "Saturnus",
+        "anecdote": "Het binnenste zonnestelsel, waarvan de aarde deel uitmaakt, verwijst naar het gebied tussen de zon en de asteroïdengordel."
+      },
+      {
+        "id": 19,
+        "question": "Welke sonde vloog als eerste over Venus in 1962 ?",
+        "propositions": [
+          "Baan 3",
+          "Zeeman 2",
+          "Pionier 5",
+          "Ontdek 6"
+        ],
+        "réponse": "Zeeman 2",
+        "anecdote": "Na 3,5 maand reizen vliegt hij over Venus en wordt daarmee de eerste sonde die over een andere planeet dan de aarde vliegt."
+      },
+      {
+        "id": 20,
+        "question": "Welke planeet dankt zijn naam aan de god van handel en reizen ?",
+        "propositions": [
+          "Maart",
+          "Mercurius",
+          "Jupiter",
+          "Venus"
+        ],
+        "réponse": "Mercurius",
+        "anecdote": "Mercurius is de planeet die het dichtst bij de zon staat, maar ook de kleinste en minst massieve, met meer dan een twintigste van de massa van de aarde."
+      }
+    ],
+    "expert": [
+      {
+        "id": 21,
+        "question": "Wat is de heetste planeet in het zonnestelsel ?",
+        "propositions": [
+          "Saturnus",
+          "Uranus",
+          "Venus",
+          "Mercurius"
+        ],
+        "réponse": "Venus",
+        "anecdote": "De oppervlaktetemperatuur (462°C) wordt gehandhaafd door het broeikaseffect dat wordt veroorzaakt door de koolstofdioxiderijke atmosfeer."
+      },
+      {
+        "id": 22,
+        "question": "Welke kleine lichamen zijn samengesteld uit rotsen en metallische mineralen ?",
+        "propositions": [
+          "Meteoren",
+          "Kometen",
+          "Ringen",
+          "Asteroïden"
+        ],
+        "réponse": "Asteroïden",
+        "anecdote": "De asteroïdengordel bevindt zich in een baan tussen Mars en Jupiter, op een afstand tussen 2,3 en 3,3 AU van de zon."
+      },
+      {
+        "id": 23,
+        "question": "Hoeveel bekende natuurlijke satellieten behoren tot het zonnestelsel ?",
+        "propositions": [
+          "495",
+          "175",
+          "345",
+          "235"
+        ],
+        "réponse": "175",
+        "anecdote": "Deze objecten draaien rond planeten, dwergplaneten en kleine lichamen in het zonnestelsel in plaats van rond de zon."
+      },
+      {
+        "id": 24,
+        "question": "Welke naam werd gegeven aan de magnetische grens van het zonnestelsel ?",
+        "propositions": [
+          "Heliozone",
+          "Heliopauze",
+          "Heliosheath",
+          "Heliosfeer"
+        ],
+        "réponse": "Heliopauze",
+        "anecdote": "Wanneer deeltjes uitgezonden door de zon botsen met interstellaire deeltjes, zenden ze energie uit."
+      },
+      {
+        "id": 25,
+        "question": "Welke wolk zou miljarden stabiele komeetkernen bevatten ?",
+        "propositions": [
+          "Grahams wolk",
+          "Daltonwolk",
+          "Planckwolk",
+          "Oortwolk"
+        ],
+        "réponse": "Oortwolk",
+        "anecdote": "Het wordt soms de buitenste wolk genoemd, in tegenstelling tot de Hills-wolk die is vernoemd naar de wetenschapper die het heeft ontdekt."
+      },
+      {
+        "id": 26,
+        "question": "Wat is de kleinste erkende dwergplaneet in het zonnestelsel ?",
+        "propositions": [
+          "Charron",
+          "Kers",
+          "MaakMaak",
+          "Haumea"
+        ],
+        "réponse": "Kers",
+        "anecdote": "Ceres, de enige dwergplaneet in de asteroïdengordel, werd op 1 januari 1801 ontdekt door Giuseppe Piazzi."
+      },
+      {
+        "id": 27,
+        "question": "Welk fenomeen is het gevolg van de implosie van een ster aan het einde van zijn leven ?",
+        "propositions": [
+          "Supernova",
+          "hoogtepunt",
+          "pulser",
+          "Zwarte Ster"
+        ],
+        "réponse": "Supernova",
+        "anecdote": "Supernovae zijn zeldzame gebeurtenissen op menselijke schaal : hun snelheid wordt geschat op ongeveer één tot drie per eeuw in de Melkweg."
+      },
+      {
+        "id": 28,
+        "question": "Welke hypothetische planeet zou in een baan tussen de zon en Mercurius draaien ?",
+        "propositions": [
+          "Vulcan",
+          "tiamate",
+          "Themis",
+          "Gravastar"
+        ],
+        "réponse": "Vulcan",
+        "anecdote": "In het fictieve universum van « Star Trek » komen Vulcans oorspronkelijk voor op de gelijknamige planeet in het Beta Kwadrant."
+      },
+      {
+        "id": 29,
+        "question": "Wat is de meest massieve vulkaan in het zonnestelsel, gelegen op Mars ?",
+        "propositions": [
+          "Victoria",
+          "Olympus Bergen",
+          "Biblis Tholus",
+          "Nili Patera"
+        ],
+        "réponse": "Olympus Bergen",
+        "anecdote": "Olympus Mons is de hoogst bekende landvorm in het zonnestelsel op 21.229 meter boven het referentieniveau van Mars."
+      },
+      {
+        "id": 30,
+        "question": "Welke buitenplaneet heeft vier Galilese satellieten ?",
+        "propositions": [
+          "Maart",
+          "Saturnus",
+          "Jupiter",
+          "Uranu"
+        ],
+        "réponse": "Jupiter",
+        "anecdote": "Ontdekt door de Italiaanse astronoom Galileo, hebben Ganymedes, Callisto, Io en Europa overeenkomsten met de tellurische planeten."
+      }
+    ]
+    }
+  }
+}

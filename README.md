@@ -38,7 +38,6 @@ erDiagram
 
     Question {
 		int id PK "IDENTITY"
-        int correct_answer_id FK
         int theme_id FK
         string question "NOT NULL"
     }
@@ -58,4 +57,5 @@ erDiagram
 	Question }o--o{ Quizz : "Contains"
 	Theme }o--o{ Quizz : "Belongs to"
 	Answer }|--|| Question : "Proposes choices"
+	Answer ||--|| Question : "correct_answer"
 ```

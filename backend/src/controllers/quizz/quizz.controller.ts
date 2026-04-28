@@ -1,5 +1,5 @@
 import { Controller, Delete, Get, Param, ParseIntPipe } from '@nestjs/common';
-import { QuizzDto } from 'src/dto/quizz.dto';
+import { QuizzDto } from 'src/dtos/quizz.dto';
 import { QuizzEntityToDto } from 'src/mappers/quizz.mapper';
 import { QuizzService } from 'src/services/quizz/quizz.service';
 

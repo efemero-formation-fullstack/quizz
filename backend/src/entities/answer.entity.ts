@@ -1,16 +1,22 @@
-import { Column, Entity, ManyToOne, PrimaryGeneratedColumn } from "typeorm";
-import { QuestionEntity } from "./question.entity";
+import {
+  Column,
+  Entity,
+  JoinColumn,
+  ManyToOne,
+  PrimaryGeneratedColumn,
+} from 'typeorm';
+import { QuestionEntity } from './question.entity';
 
-@Entity ({ name: 'answer'})
+@Entity({ name: 'answers' })
 export class AnswerEntity {
+  @PrimaryGeneratedColumn()
+  id: number;
 
-    @PrimaryGeneratedColumn()
-    id:number;
+  @Column({ type: 'text' })
+  answer: string;
 
-    @Column ({ type: 'text' })
-    answer:string;
-    
-    //RELATION
-    @ManyToOne(()=> QuestionEntity,(q)=> q.answers)
-    question: QuestionEntity;
+  @ManyToOne(() => QuestionEntity, (q) => q.answers)
+  @JoinColumn({ name: 'question_id' })
+  question: QuestionEntity;
 }
+

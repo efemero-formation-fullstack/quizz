@@ -11,11 +11,14 @@ export class ThemeService {
   ) {}
 
   async getAll(): Promise<ThemeEntity[]> {
-    return await this._themeRepo.find();
+    return await this._themeRepo.find({ relations: ['quizzes', 'questions'] });
   }
 
   async getById(id: number): Promise<ThemeEntity> {
-    const Theme = await this._themeRepo.findOne({ where: { id } });
+    const Theme = await this._themeRepo.findOne({
+      where: { id },
+      relations: ['quizzes', 'questions'],
+    });
     if (!Theme) throw new Error('Theme not found');
     return Theme;
   }
@@ -41,4 +44,3 @@ export class ThemeService {
     await this._themeRepo.remove(Theme);
   }
 }
-

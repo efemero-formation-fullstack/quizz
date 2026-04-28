@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "target": "ES2021",
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "esModuleInterop": true,
+    "strict": false,
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
+    "baseUrl": ".."
+  },
+  "include": [
+    "./**/*.ts",
+    "../src/**/*.ts"
+  ]
+}

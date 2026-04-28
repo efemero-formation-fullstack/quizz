@@ -26,7 +26,6 @@ import { QuestionService } from './services/question/question.service';
 import { QuizzService } from './services/quizz/quizz.service';
 import { ThemeService } from './services/theme/theme.service';
 import { UserService } from './services/user/user.service';
-import { UploadController } from './controllers/upload/upload.controller';
 
 console.log(process.env);
 @Module({
@@ -70,7 +69,6 @@ console.log(process.env);
     QuizzController,
     ThemeController,
     UserController,
-    UploadController,
   ],
   providers: [
     AppService,

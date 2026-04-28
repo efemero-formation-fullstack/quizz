@@ -1,3 +1,4 @@
+import { Gender } from '../enums/gender.enum';
 import { UserRole } from '../enums/user-role.enum';
 
 export interface User {
@@ -5,7 +6,7 @@ export interface User {
   username: string;
   email: string;
   birthdate: string;
-  gender: string;
+  gender: Gender;
   role: UserRole;
 }
 
@@ -13,5 +14,5 @@ export interface UpdateUser {
   username?: string;
   email?: string;
   birthdate?: string;
-  gender?: string;
+  gender?: Gender;
 }

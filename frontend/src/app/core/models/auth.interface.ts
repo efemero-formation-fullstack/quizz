@@ -1,3 +1,5 @@
+import { Gender } from '../enums/gender.enum';
+
 export interface LoginResponse {
   token: string;
 }
@@ -13,7 +15,7 @@ export interface RegisterData {
   email: string;
   password: string;
   birthdate: string;
-  gender: string;
+  gender: Gender;
 }
 
 export interface LoginData {
@@ -21,7 +23,7 @@ export interface LoginData {
   email: string;
   password: string;
   birthdate: string;
-  gender: string;
+  gender: Gender;
 }
 
 export interface LoginData {
