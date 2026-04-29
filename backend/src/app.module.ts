@@ -10,9 +10,11 @@ import { AuthController } from './controllers/auth/auth.controller';
 import { QuestionController } from './controllers/question/question.controller';
 import { QuizzController } from './controllers/quizz/quizz.controller';
 import { ThemeController } from './controllers/theme/theme.controller';
+import { GameController } from './controllers/game/game.controller';
 import { UserController } from './controllers/user/user.controller';
 import {
   AnswerEntity,
+  GameEntity,
   QuestionEntity,
   QuizzEntity,
   ThemeEntity,
@@ -25,6 +27,7 @@ import { AuthService } from './services/auth/auth.service';
 import { QuestionService } from './services/question/question.service';
 import { QuizzService } from './services/quizz/quizz.service';
 import { ThemeService } from './services/theme/theme.service';
+import { GameService } from './services/game/game.service';
 import { UserService } from './services/user/user.service';
 
 console.log(process.env);
@@ -50,6 +53,7 @@ console.log(process.env);
         ThemeEntity,
         QuestionEntity,
         AnswerEntity,
+        GameEntity,
       ],
       namingStrategy: new SnakeNamingStrategy(),
     }),
@@ -59,11 +63,13 @@ console.log(process.env);
       ThemeEntity,
       QuestionEntity,
       AnswerEntity,
+      GameEntity,
     ]),
   ],
   controllers: [
     AppController,
     AnswerController,
+    GameController,
     AuthController,
     QuestionController,
     QuizzController,
@@ -73,6 +79,7 @@ console.log(process.env);
   providers: [
     AppService,
     AnswerService,
+    GameService,
     AuthService,
     QuestionService,
     QuizzService,

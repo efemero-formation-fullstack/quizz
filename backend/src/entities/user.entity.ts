@@ -1,4 +1,11 @@
-import { Column, Entity, Index, PrimaryGeneratedColumn } from 'typeorm';
+import {
+  Column,
+  Entity,
+  Index,
+  OneToMany,
+  PrimaryGeneratedColumn,
+} from 'typeorm';
+import { GameEntity } from './game.entity';
 import { Gender } from '../enums/gender.enum';
 import { UserRole } from '../enums/user-role.enum';
 
@@ -33,4 +40,7 @@ export class UserEntity {
     default: UserRole.USER,
   })
   role: UserRole;
+
+  @OneToMany(() => GameEntity, (game) => game.user)
+  games: GameEntity[];
 }

@@ -1,10 +1,11 @@
 import { Component, inject } from '@angular/core';
 import { UserRole } from '../../core/enums/user-role.enum';
 import { AuthService } from '../../core/services/auth.service';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-nav-bar',
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './nav-bar.html',
   styleUrl: './nav-bar.css',
 })
