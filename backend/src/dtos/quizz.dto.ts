@@ -1,4 +1,5 @@
 import { QuizzVisibility } from 'src/enums/quizz_visibility.enum';
+import { GameDto } from './game.dto';
 import { ThemeDto } from './theme.dto';
 
 export class QuizzDto {
@@ -8,4 +9,5 @@ export class QuizzDto {
   visibility: QuizzVisibility;
   theme: ThemeDto;
   questions: number[];
+  games?: GameDto[];
 }

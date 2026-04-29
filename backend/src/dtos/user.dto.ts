@@ -1,3 +1,4 @@
+import { GameDto } from './game.dto';
 import { Gender } from 'src/enums/gender.enum';
 import { UserRole } from '../enums/user-role.enum';
 
@@ -8,5 +9,5 @@ export class UserDto {
   birthdate: Date;
   gender: Gender;
   role: UserRole;
+  games?: GameDto[];
 }
-

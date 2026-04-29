@@ -23,7 +23,7 @@ dotenv.config({ path: path.resolve(__dirname, '../.env') });
 export const AppDataSource = new DataSource({
   type: 'postgres',
   host: process.env.POSTGRES_HOST,
-  port: +process.env.POSTGRES_PORT!,
+  port: +process.env.POSTGRES_PORT,
   database: process.env.POSTGRES_DB,
   username: process.env.POSTGRES_USER,
   password: process.env.POSTGRES_PASSWORD,
@@ -75,14 +75,14 @@ async function main() {
           name: cat['catégorie-nom-slogan'].fr['catégorie'],
         });
         theme = await em.save(theme);
-        let questions: QuestionEntity[] = [];
+        const questions: QuestionEntity[] = [];
         for (const level of [
           cat.quizz.fr['débutant'],
           cat.quizz.fr['confirmé'],
           cat.quizz.fr['expert'],
         ]) {
           for (const q of level) {
-            let answers: AnswerEntity[] = [];
+            const answers: AnswerEntity[] = [];
             let correct_answer: AnswerEntity | null = null;
             for (const r of q.propositions) {
               answer = em.create(AnswerEntity, {
@@ -113,8 +113,8 @@ async function main() {
   } catch (e) {
     console.log(e);
   } finally {
-    AppDataSource.destroy();
+    await AppDataSource.destroy();
   }
 }
 
-main();
+void main();
