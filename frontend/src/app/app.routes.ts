@@ -24,13 +24,11 @@ export const routes: Routes = [
   {
     path: 'dashboard',
     loadComponent: () =>
-      import('./features/dashboard/dashboard-page/dashboard-page').then((m) =>
-        m.DashboardPage),
+      import('./features/dashboard/dashboard-page/dashboard-page').then((m) => m.DashboardPage),
   },
   {
     path: 'admin',
-    loadChildren: () =>
-      import('./features/admin/admin.routes').then((m) => m.ADMIN_ROUTES),
+    loadChildren: () => import('./features/admin/admin.routes').then((m) => m.ADMIN_ROUTES),
   },
   {
     path: '**',

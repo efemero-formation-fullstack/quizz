@@ -31,7 +31,7 @@ erDiagram
 		int id PK "IDENTITY"
         int score "DEFAULT 0"
         enum status "READY,STARTED,FINISHED"
-        
+
     }
 
     Question {

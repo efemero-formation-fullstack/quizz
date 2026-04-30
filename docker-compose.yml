@@ -1,23 +1,23 @@
 services:
   frontend:
-    build: 
+    build:
       context: ./frontend/
-    volumes: 
-      - ./frontend:/usr/app 
-      - /usr/app/node_modules 
-    ports: 
+    volumes:
+      - ./frontend:/usr/app
+      - /usr/app/node_modules
+    ports:
       - 4200:4200
-    depends_on: 
+    depends_on:
       - backend
 
   backend:
-    build: 
+    build:
       context: ./backend/
-    ports: 
+    ports:
       - 3000:3000
-    volumes: 
+    volumes:
       - ./backend:/app
-    depends_on: 
+    depends_on:
       - db
 
   db:
@@ -28,11 +28,10 @@ services:
       - ./backend/.env
 
   reset_db:
-    build: 
+    build:
       context: ./backend/
       dockerfile: reset_db.Dockerfile
-    depends_on: 
+    depends_on:
       - db
     profiles:
       - reset_db
-    

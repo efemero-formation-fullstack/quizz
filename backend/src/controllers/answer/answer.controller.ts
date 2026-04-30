@@ -36,4 +36,3 @@ export class AnswerController {
     return answerEntityToAnswerDto(entity);
   }
 }
-
