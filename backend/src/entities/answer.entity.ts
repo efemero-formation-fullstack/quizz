@@ -19,4 +19,3 @@ export class AnswerEntity {
   @JoinColumn({ name: 'question_id' })
   question: QuestionEntity;
 }
-

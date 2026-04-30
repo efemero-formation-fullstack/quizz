@@ -6,3 +6,10 @@ export class QuizzCreateDto {
   visibility?: QuizzVisibility;
   themeIds?: number[];
 }
+
+export class QuizzUpdateDto {
+  title?: string;
+  imgUrl?: string;
+  visibility?: QuizzVisibility;
+  themeIds?: number[];
+}

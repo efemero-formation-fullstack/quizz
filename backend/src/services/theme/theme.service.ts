@@ -1,5 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
+import { ThemeCreateDto } from 'src/dtos/theme.form.dto';
 import { ThemeEntity } from 'src/entities/theme.entity';
 import { Repository } from 'typeorm';
 
@@ -23,7 +24,7 @@ export class ThemeService {
     return Theme;
   }
 
-  async create(data: Omit<ThemeEntity, 'id' | 'role'>): Promise<ThemeEntity> {
+  async create(data: ThemeCreateDto): Promise<ThemeEntity> {
     const existingName = await this._themeRepo.findOne({
       where: { name: data.name },
     });

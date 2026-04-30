@@ -1,5 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
+import { QuizzCreateDto } from 'src/dtos/quizz.form.dto';
 import { QuizzEntity } from 'src/entities/quizz.entity';
 import { Repository } from 'typeorm';
 
@@ -23,7 +24,7 @@ export class QuizzService {
     return Theme;
   }
 
-  async create(data: Omit<QuizzEntity, 'id'>): Promise<QuizzEntity> {
+  async create(data: QuizzCreateDto): Promise<QuizzEntity> {
     const existingTitle = await this._quizzRepo.findOne({
       where: { title: data.title },
     });

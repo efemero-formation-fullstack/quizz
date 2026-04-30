@@ -46,15 +46,13 @@ export class AuthService {
 
   async login(data: LoginData): Promise<void> {
     const response = await firstValueFrom(
-      this._httpClient.post<LoginResponse>(this._apiURL + 'auth/login', data)
+      this._httpClient.post<LoginResponse>(this._apiURL + 'auth/login', data),
     );
     this._authToken.set(response.token);
   }
 
   async register(data: RegisterData): Promise<void> {
-    await firstValueFrom(
-      this._httpClient.post(this._apiURL + 'auth/register', data)
-    );
+    await firstValueFrom(this._httpClient.post(this._apiURL + 'auth/register', data));
   }
 
   logout(): void {

@@ -1,5 +1,4 @@
-import { ChangeDetectionStrategy, Component, inject, signal } from
-    '@angular/core';
+import { ChangeDetectionStrategy, Component, inject, signal } from '@angular/core';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { Router, RouterLink } from '@angular/router';
 import { AuthService } from '../../../core/services/auth.service';
@@ -31,7 +30,7 @@ export class RegisterPage {
       await this._authService.register(this.form.value as any);
       this._router.navigate(['/auth/login']);
     } catch {
-      this.error.set('Erreur lors de l\'inscription');
+      this.error.set("Erreur lors de l'inscription");
     }
   }
 }
