@@ -1,0 +1,41 @@
+<div class="container">
+  <h1>Créer un quiz</h1>
+
+  @if (errorMessage()) {
+    <p class="error">{{ errorMessage() }}</p>
+  }
+
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <div class="field">
+      <label for="title">Titre</label>
+      <input id="title" type="text" formControlName="title" placeholder="Titre du quiz" />
+    </div>
+
+    <div class="field">
+      <label for="imgUrl">Image de couverture</label>
+      <div class="img-input">
+        <input id="imgUrl" type="text" formControlName="imgUrl" placeholder="https://..." />
+        <label class="btn-upload" for="fileInput">Choisir un fichier</label>
+        <input id="fileInput" type="file" accept="image/*" (change)="onFileUpload($event)" />
+      </div>
+    </div>
+
+    <div class="field">
+      <label>Thèmes</label>
+      <div class="themes">
+        @for (theme of themes(); track theme.id) {
+          <label class="theme-item">
+            <input
+              type="checkbox"
+              [value]="theme.id"
+              (change)="onThemeChange(theme.id, $event)"
+            />
+            {{ theme.name }}
+          </label>
+        }
+      </div>
+    </div>
+
+    <button type="submit" [disabled]="form.invalid">Créer le quiz</button>
+  </form>
+</div>

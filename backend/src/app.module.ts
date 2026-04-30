@@ -30,6 +30,7 @@ import { ThemeService } from './services/theme/theme.service';
 import { GameService } from './services/game/game.service';
 import { UserService } from './services/user/user.service';
 import { FriendController } from './controllers/friend/friend.controller';
+import { UploadController } from './controllers/upload/upload.controller';
 
 console.log(process.env);
 @Module({
@@ -77,6 +78,7 @@ console.log(process.env);
     ThemeController,
     UserController,
     FriendController,
+    UploadController,
   ],
   providers: [
     AppService,
