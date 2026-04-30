@@ -12,9 +12,10 @@
   </div>
   <div>
     <label for="answer-input">Answer :</label>
-    <input type="text" id="answer-input" formControlName="answer" />
+    <input type="text" id="answer-input" formControlName="correct_answer_id" />
     <app-forms-error-display [control]="correct_answer_id" name="answer" />
   </div>
+  <button type="submit" [disabled]="formQuestion.invalid">Add Question</button>
 </form>
 
 <table>

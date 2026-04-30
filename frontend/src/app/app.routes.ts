@@ -22,6 +22,11 @@ export const routes: Routes = [
     ],
   },
   {
+    path: 'question',
+    loadComponent: () =>
+      import('./features/question/pages/question-page/question-page').then((m) => m.QuestionPage),
+  },
+  {
     path: 'dashboard',
     loadComponent: () =>
       import('./features/dashboard/dashboard-page/dashboard-page').then((m) => m.DashboardPage),

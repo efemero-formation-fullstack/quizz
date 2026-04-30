@@ -30,4 +30,15 @@ export class QuestionService {
     );
     return response.data;
   }
+
+  async create(data: {
+    question: string;
+    theme_id: number;
+    correct_answer_id: number;
+  }): Promise<QuestionData> {
+    const response = await firstValueFrom(
+      this._htttpClient.post<{ data: QuestionData }>(this._apiUrl + '/question', data),
+    );
+    return response.data;
+  }
 }
