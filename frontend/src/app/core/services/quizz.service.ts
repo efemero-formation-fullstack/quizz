@@ -17,6 +17,13 @@ export class QuizzService {
     return response.data;
   }
 
+  async create(data: { title: string; imgUrl: string; themeIds: number[] }): Promise<any> {
+    const response = await firstValueFrom(
+      this._httpClient.post<{ data: any }>(this._apiUrl + '/quizz', data),
+    );
+    return response.data;
+  }
+
   async delete(id: number): Promise<void> {
     await firstValueFrom(this._httpClient.delete(this._apiUrl + '/quizz/' + id));
   }

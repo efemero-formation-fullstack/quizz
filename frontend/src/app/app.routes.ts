@@ -36,6 +36,11 @@ export const routes: Routes = [
     loadChildren: () => import('./features/admin/admin.routes').then((m) => m.ADMIN_ROUTES),
   },
   {
+    path: 'quizz/create',
+    loadComponent: () =>
+      import('./features/quizz/pages/quizz-create/quizz-create').then((m) => m.QuizzCreate),
+  },
+  {
     path: '**',
     redirectTo: 'dashboard',
   },
