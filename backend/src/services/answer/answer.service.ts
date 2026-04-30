@@ -34,4 +34,15 @@ export class AnswerService {
       relations: ['question'],
     });
   }
+
+  async update(id: number, data: Partial<AnswerEntity>): Promise<AnswerEntity> {
+    const answer = await this.getById(id);
+    Object.assign(answer, data);
+    return await this._answerRepo.save(answer);
+  }
+
+  async delete(id: number): Promise<void> {
+    const answer = await this.getById(id);
+    await this._answerRepo.remove(answer);
+  }
 }

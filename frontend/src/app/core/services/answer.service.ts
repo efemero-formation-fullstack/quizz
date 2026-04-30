@@ -33,4 +33,11 @@ export class AnswerService {
     );
     return response.data;
   }
+
+  async create(answer: string): Promise<Answer> {
+    const response = await firstValueFrom(
+      this._httpClient.post<{ data: Answer }>(this._apiUrl + '/answer', { answer }),
+    );
+    return response.data;
+  }
 }
