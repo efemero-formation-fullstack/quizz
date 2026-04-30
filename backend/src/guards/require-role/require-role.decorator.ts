@@ -3,7 +3,7 @@ import { UserRole } from '../../enums/user-role.enum';
 import { RequireRoleGuard } from './require-role.guard';
 
 export const RequireRole = (...args: UserRole[]) =>
-    applyDecorators(
-        SetMetadata('require-role', args),
-        UseGuards(RequireRoleGuard),
-    );
+  applyDecorators(
+    SetMetadata('require-role', args),
+    UseGuards(RequireRoleGuard),
+  );

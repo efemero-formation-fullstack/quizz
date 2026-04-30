@@ -11,11 +11,14 @@ export class QuizzService {
   ) {}
 
   async getAll(): Promise<QuizzEntity[]> {
-    return await this._quizzRepo.find();
+    return await this._quizzRepo.find({ relations: { games: true } });
   }
 
   async getById(id: number): Promise<QuizzEntity> {
-    const Theme = await this._quizzRepo.findOne({ where: { id } });
+    const Theme = await this._quizzRepo.findOne({
+      where: { id },
+      relations: { games: true },
+    });
     if (!Theme) throw new Error('Theme not found');
     return Theme;
   }

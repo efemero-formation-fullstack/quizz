@@ -8,6 +8,7 @@ import {
 import { GameEntity } from './game.entity';
 import { Gender } from '../enums/gender.enum';
 import { UserRole } from '../enums/user-role.enum';
+import { QuizzEntity } from './quizz.entity';
 
 @Entity({ name: 'users' })
 export class UserEntity {
@@ -43,4 +44,7 @@ export class UserEntity {
 
   @OneToMany(() => GameEntity, (game) => game.user)
   games: GameEntity[];
+
+  @OneToMany(() => QuizzEntity, (quizz) => quizz.owner)
+  quizzes: QuizzEntity[];
 }

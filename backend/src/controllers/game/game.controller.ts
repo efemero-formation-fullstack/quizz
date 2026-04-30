@@ -7,19 +7,33 @@ import {
   ParseIntPipe,
   Patch,
   Post,
+  Req,
 } from '@nestjs/common';
+import { Request } from 'express';
 import { GameDto } from 'src/dtos/game.dto';
 import { CreateGameDto, UpdateGameDto } from 'src/dtos/game.form.dto';
+import { RequireRole } from 'src/guards/require-role/require-role.decorator';
+import { SessionInterface } from 'src/interfaces/session.interface';
+} from '@nestjs/common';
 import { gameEntityToDto } from 'src/mappers/game.mapper';
 import { GameService } from 'src/services/game/game.service';
 
 @Controller('game')
+@RequireRole()
 export class GameController {
   constructor(private readonly gameService: GameService) {}
 
   @Get()
   async getAll(): Promise<{ data: GameDto[] }> {
     const games = await this.gameService.getAll();
+    return { data: games.map(gameEntityToDto) };
+  }
+
+  @Get('mine')
+  async getMine(
+    @Req() req: Request & { session: SessionInterface },
+  ): Promise<{ data: GameDto[] }> {
+    const games = await this.gameService.getAllByUser(req.session.id);
     return { data: games.map(gameEntityToDto) };
   }
 
@@ -48,8 +62,11 @@ export class GameController {
   }
 
   @Post()
-  async create(@Body() body: CreateGameDto): Promise<{ data: GameDto }> {
-    const game = await this.gameService.create(body);
+  async create(
+    @Body() body: CreateGameDto,
+    @Req() req: Request & { session: SessionInterface },
+  ): Promise<{ data: GameDto }> {
+    const game = await this.gameService.create(body.quizzId, req.session.id);
     return { data: gameEntityToDto(game) };
   }
 

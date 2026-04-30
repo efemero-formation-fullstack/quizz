@@ -1,4 +1,9 @@
-import { CanActivate, ExecutionContext, Injectable, UnauthorizedException } from '@nestjs/common';
+import {
+  CanActivate,
+  ExecutionContext,
+  Injectable,
+  UnauthorizedException,
+} from '@nestjs/common';
 import { Reflector } from '@nestjs/core';
 import { UserRole } from '../../enums/user-role.enum';
 import { SessionInterface } from '../../interfaces/session.interface';
@@ -9,8 +14,13 @@ export class RequireRoleGuard implements CanActivate {
   constructor(private readonly _reflector: Reflector) {}
 
   canActivate(context: ExecutionContext): boolean {
-    const roles = this._reflector.get<UserRole[]>('require-role', context.getHandler());
-    const req = context.switchToHttp().getRequest<Request & { session: SessionInterface }>();
+    const roles = this._reflector.get<UserRole[]>(
+      'require-role',
+      context.getHandler(),
+    );
+    const req = context
+      .switchToHttp()
+      .getRequest<Request & { session: SessionInterface }>();
     //user pas connecté
     if (!req.session) {
       throw new UnauthorizedException('Not authenticated');
@@ -27,4 +37,3 @@ export class RequireRoleGuard implements CanActivate {
     return true;
   }
 }
-
