@@ -13,4 +13,3 @@ export class UpdateUserDto {
   birthdate?: Date;
   gender?: Gender;
 }
-
