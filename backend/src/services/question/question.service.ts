@@ -12,7 +12,11 @@ export class QuestionService {
   ) {}
 
   async create(dto: QuestionCreateDto): Promise<QuestionEntity> {
-    const question = this._questionRepo.create(dto);
+    const question = this._questionRepo.create({
+      question: dto.question,
+      theme: { id: dto.theme_id },
+      correct_answer: { id: dto.correct_answer_id },
+    });
     return await this._questionRepo.save(question);
   }
 
