@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unnecessary-type-assertion */
 import process from 'node:process';
 import 'reflect-metadata';
 import * as path from 'node:path';
@@ -24,7 +25,7 @@ dotenv.config({ path: path.resolve(__dirname, '../.env') });
 export const AppDataSource = new DataSource({
   type: 'postgres',
   host: process.env.POSTGRES_HOST,
-  port: +process.env.POSTGRES_PORT,
+  port: +process.env.POSTGRES_PORT!,
   database: process.env.POSTGRES_DB,
   username: process.env.POSTGRES_USER,
   password: process.env.POSTGRES_PASSWORD,
