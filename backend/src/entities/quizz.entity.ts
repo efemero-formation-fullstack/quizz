@@ -2,14 +2,17 @@ import { QuizzVisibility } from 'src/enums/quizz_visibility.enum';
 import {
   Column,
   Entity,
+  JoinColumn,
   JoinTable,
   ManyToMany,
+  ManyToOne,
   OneToMany,
   PrimaryGeneratedColumn,
 } from 'typeorm';
 import { GameEntity } from './game.entity';
 import { QuestionEntity } from './question.entity';
 import { ThemeEntity } from './theme.entity';
+import { UserEntity } from './user.entity';
 
 @Entity({ name: 'quizzes' })
 export class QuizzEntity {
@@ -39,4 +42,8 @@ export class QuizzEntity {
 
   @OneToMany(() => GameEntity, (game) => game.quizz)
   games: GameEntity[];
+
+  @ManyToOne(() => UserEntity, (user) => user.quizzes)
+  @JoinColumn({ name: 'owner_id' })
+  owner: UserEntity;
 }

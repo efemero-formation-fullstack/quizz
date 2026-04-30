@@ -1,4 +1,4 @@
 export interface SessionInterface {
-    id: number;
-    role: string;
+  id: number;
+  role: string;
 }

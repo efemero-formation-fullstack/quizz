@@ -29,8 +29,6 @@ erDiagram
 
     Game {
 		int id PK "IDENTITY"
-        int user_id FK
-        int quizz_id FK
         int score "DEFAULT 0"
         enum status "READY,STARTED,FINISHED"
         
@@ -52,10 +50,11 @@ erDiagram
         string name "NOT NULL"
     }
 
-	User }o--o{ Quizz : "Plays via Game"
 	User }o--o{ User : "Are friends"
 	Question }o--o{ Quizz : "Contains"
 	Theme }o--o{ Quizz : "Belongs to"
 	Answer }|--|| Question : "Proposes choices"
+	User ||--|{ Game : "Plays a game"
+	Game ||--|{ Quizz : "Proposes a quizz"
 	Answer ||--|| Question : "correct_answer"
 ```

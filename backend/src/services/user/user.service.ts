@@ -12,11 +12,14 @@ export class UserService {
   ) {}
 
   async getAll(): Promise<UserEntity[]> {
-    return await this._userRepo.find();
+    return await this._userRepo.find({ relations: { games: true } });
   }
 
   async getById(id: number): Promise<UserEntity> {
-    const user = await this._userRepo.findOne({ where: { id } });
+    const user = await this._userRepo.findOne({
+      where: { id },
+      relations: { games: true },
+    });
     if (!user) throw new Error('User not found');
     return user;
   }

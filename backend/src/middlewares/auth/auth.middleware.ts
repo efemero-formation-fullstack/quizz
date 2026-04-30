@@ -1,4 +1,8 @@
-import { Injectable, NestMiddleware, UnauthorizedException } from '@nestjs/common';
+import {
+  Injectable,
+  NestMiddleware,
+  UnauthorizedException,
+} from '@nestjs/common';
 import { NextFunction, Request, Response } from 'express';
 import { JwtService } from '@nestjs/jwt';
 import { SessionInterface } from '../../interfaces/session.interface';
@@ -8,9 +12,9 @@ export class AuthMiddleware implements NestMiddleware {
   constructor(private readonly _jwtService: JwtService) {}
 
   use(
-      req: Request & { session: SessionInterface },
-      res: Response,
-      next: NextFunction,
+    req: Request & { session: SessionInterface },
+    res: Response,
+    next: NextFunction,
   ) {
     const bearerToken = req.headers.authorization;
     if (!bearerToken) {

@@ -1,6 +1,6 @@
 import { Injectable, NotFoundException } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
-import { CreateGameDto, UpdateGameDto } from 'src/dtos/game.form.dto';
+import { UpdateGameDto } from 'src/dtos/game.form.dto';
 import { GameEntity } from 'src/entities/game.entity';
 import { Repository } from 'typeorm';
 
@@ -37,10 +37,10 @@ export class GameService {
     return game;
   }
 
-  async create(data: CreateGameDto): Promise<GameEntity> {
+  async create(quizzId: number, userId: number): Promise<GameEntity> {
     const game = this._gameRepo.create({
-      user: { id: data.userId },
-      quizz: { id: data.quizzId },
+      user: { id: userId },
+      quizz: { id: quizzId },
     });
     return await this._gameRepo.save(game);
   }
