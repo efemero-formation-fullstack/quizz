@@ -2,6 +2,7 @@ import {
   Column,
   Entity,
   Index,
+  ManyToMany,
   OneToMany,
   PrimaryGeneratedColumn,
 } from 'typeorm';
@@ -47,4 +48,7 @@ export class UserEntity {
 
   @OneToMany(() => QuizzEntity, (quizz) => quizz.owner)
   quizzes: QuizzEntity[];
+
+  @ManyToMany(() => UserEntity, (friend) => friend.friends)
+  friends: UserEntity[];
 }
