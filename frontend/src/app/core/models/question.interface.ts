@@ -4,9 +4,8 @@ export interface Question {
   question: string;
   answers: number[];
   theme: Theme;
-}
-
-export interface QuestionData extends Question {
   id: number;
   correct_answer_id: number;
 }
+
+export interface QuestionData extends Omit<Question, 'answers'> {}
