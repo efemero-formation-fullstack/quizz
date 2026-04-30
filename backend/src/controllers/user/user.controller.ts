@@ -6,7 +6,11 @@ import {
   Param,
   ParseIntPipe,
   Patch,
+  Post,
+  Req,
 } from '@nestjs/common';
+import { Request } from 'express';
+import { Session } from '../../interfaces/session.interface';
 import { UserDto } from '../../dtos/user.dto';
 import { UpdateUserDto } from '../../dtos/user.form.dto';
 import { UserRole } from '../../enums/user-role.enum';
@@ -16,12 +20,12 @@ import { UserService } from '../../services/user/user.service';
 
 @Controller('user')
 export class UserController {
-  constructor(private readonly userService: UserService) {}
+  constructor(private readonly _userService: UserService) {}
 
   @Get()
-  @RequireRole(UserRole.ADMIN)
+  // @RequireRole(UserRole.ADMIN)
   async getAll(): Promise<{ data: UserDto[] }> {
-    const users = await this.userService.getAll();
+    const users = await this._userService.getAll();
     return { data: users.map(userEntityToDto) };
   }
 
@@ -30,7 +34,7 @@ export class UserController {
   async getById(
     @Param('id', ParseIntPipe) id: number,
   ): Promise<{ data: UserDto }> {
-    const user = await this.userService.getById(id);
+    const user = await this._userService.getById(id);
     return { data: userEntityToDto(user) };
   }
 
@@ -40,13 +44,33 @@ export class UserController {
     @Param('id', ParseIntPipe) id: number,
     @Body() body: UpdateUserDto,
   ): Promise<{ data: UserDto }> {
-    const user = await this.userService.update(id, body);
+    const user = await this._userService.update(id, body);
+    return { data: userEntityToDto(user) };
+  }
+
+  @Post('friend')
+  @RequireRole()
+  async addFriend(
+    @Body('email') friendEmail: string,
+    @Req() req: Request & { session: Session },
+  ): Promise<{ data: UserDto }> {
+    const user = await this._userService.addFriend(req.session.id, friendEmail);
+    return { data: userEntityToDto(user) };
+  }
+
+  @Delete('friend/:friendId')
+  @RequireRole()
+  async removeFriend(
+    @Param('friendId', ParseIntPipe) friendId: number,
+    @Req() req: Request & { session: Session },
+  ): Promise<{ data: UserDto }> {
+    const user = await this._userService.removeFriend(req.session.id, friendId);
     return { data: userEntityToDto(user) };
   }
 
   @Delete(':id')
   @RequireRole(UserRole.ADMIN)
   async delete(@Param('id', ParseIntPipe) id: number): Promise<void> {
-    await this.userService.delete(id);
+    await this._userService.delete(id);
   }
 }

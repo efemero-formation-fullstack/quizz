@@ -7,6 +7,8 @@ import * as dotenv from 'dotenv';
 import { Gender } from 'src/enums/gender.enum';
 import { UserRole } from 'src/enums/user-role.enum';
 import { DataSource } from 'typeorm';
+import { SnakeNamingStrategy } from 'typeorm-naming-strategies';
+import { UserService } from '../src/services/user/user.service';
 import {
   AnswerEntity,
   GameEntity,
@@ -40,6 +42,7 @@ export const AppDataSource = new DataSource({
     AnswerEntity,
     GameEntity,
   ],
+  namingStrategy: new SnakeNamingStrategy(),
   migrations: [],
   subscribers: [],
 });
@@ -47,6 +50,7 @@ export const AppDataSource = new DataSource({
 async function main() {
   try {
     const ds = await AppDataSource.initialize();
+    const userService = new UserService(ds.getRepository(UserEntity));
 
     // Run all the operations inside a transaction
     await ds.transaction(async (em) => {
@@ -69,7 +73,6 @@ async function main() {
         user = em.create(UserEntity, userData);
         await em.save(user);
       }
-
       let theme: ThemeEntity;
       let question: QuestionEntity;
       let answer: AnswerEntity;
@@ -113,6 +116,10 @@ async function main() {
         await em.save(theme);
       }
     });
+
+    // Add friends after the transaction has committed
+    await userService.addFriend(251, 'kmandelol@about.com');
+    await userService.addFriend(251, 'ebarthelet7a@usgs.gov');
   } catch (e) {
     console.log(e);
   } finally {
