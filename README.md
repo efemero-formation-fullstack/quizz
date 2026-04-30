@@ -36,7 +36,6 @@ erDiagram
 
     Question {
 		int id PK "IDENTITY"
-        int theme_id FK
         string question "NOT NULL"
     }
 
@@ -53,6 +52,7 @@ erDiagram
 	User }o--o{ User : "Are friends"
 	Question }o--o{ Quizz : "Contains"
 	Theme }o--o{ Quizz : "Belongs to"
+	Theme }o--o{ Question : "Belongs to"
 	Answer }|--|| Question : "Proposes choices"
 	User ||--|{ Game : "Plays a game"
 	Game ||--|{ Quizz : "Proposes a quizz"
