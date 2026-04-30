@@ -8,6 +8,7 @@ import { UserRole } from 'src/enums/user-role.enum';
 import { DataSource } from 'typeorm';
 import {
   AnswerEntity,
+  GameEntity,
   QuestionEntity,
   QuizzEntity,
   ThemeEntity,
@@ -36,6 +37,7 @@ export const AppDataSource = new DataSource({
     ThemeEntity,
     QuestionEntity,
     AnswerEntity,
+    GameEntity,
   ],
   migrations: [],
   subscribers: [],
