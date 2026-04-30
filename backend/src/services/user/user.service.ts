@@ -26,6 +26,44 @@ export class UserService {
     return user;
   }
 
+  async addFriend(userId: number, friendEmail: string): Promise<UserEntity> {
+    const friend = await this._userRepo.findOne({
+      where: { email: friendEmail },
+      relations: { friends: true },
+    });
+    if (!friend) throw new Error('Friend not found');
+    if (friend.id === userId)
+      throw new Error('Cannot add yourself as a friend');
+
+    const user = await this.getById(userId);
+
+    if (!user.friends.some((f) => f.id === friend.id)) {
+      user.friends.push(friend);
+      await this._userRepo.save(user);
+    }
+
+    if (!friend.friends.some((f) => f.id === userId)) {
+      friend.friends.push(user);
+      await this._userRepo.save(friend);
+    }
+
+    return this.getById(userId);
+  }
+
+  async removeFriend(userId: number, friendId: number): Promise<UserEntity> {
+    const [user, friend] = await Promise.all([
+      this.getById(userId),
+      this.getById(friendId),
+    ]);
+
+    user.friends = user.friends.filter((f) => f.id !== friendId);
+    friend.friends = friend.friends.filter((f) => f.id !== userId);
+
+    await Promise.all([this._userRepo.save(user), this._userRepo.save(friend)]);
+
+    return this.getById(userId);
+  }
+
   async create(data: Omit<UserEntity, 'id' | 'role'>): Promise<UserEntity> {
     const existingEmail = await this._userRepo.findOne({
       where: { email: data.email },

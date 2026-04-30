@@ -13,7 +13,7 @@ import { Request } from 'express';
 import { GameDto } from 'src/dtos/game.dto';
 import { CreateGameDto, UpdateGameDto } from 'src/dtos/game.form.dto';
 import { RequireRole } from 'src/guards/require-role/require-role.decorator';
-import { SessionInterface } from 'src/interfaces/session.interface';
+import { Session } from 'src/interfaces/session.interface';
 import { gameEntityToDto } from 'src/mappers/game.mapper';
 import { GameService } from 'src/services/game/game.service';
 
@@ -30,7 +30,7 @@ export class GameController {
 
   @Get('mine')
   async getMine(
-    @Req() req: Request & { session: SessionInterface },
+    @Req() req: Request & { session: Session },
   ): Promise<{ data: GameDto[] }> {
     const games = await this.gameService.getAllByUser(req.session.id);
     return { data: games.map(gameEntityToDto) };
@@ -63,7 +63,7 @@ export class GameController {
   @Post()
   async create(
     @Body() body: CreateGameDto,
-    @Req() req: Request & { session: SessionInterface },
+    @Req() req: Request & { session: Session },
   ): Promise<{ data: GameDto }> {
     const game = await this.gameService.create(body.quizzId, req.session.id);
     return { data: gameEntityToDto(game) };

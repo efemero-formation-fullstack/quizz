@@ -2,6 +2,7 @@ import {
   Column,
   Entity,
   Index,
+  JoinTable,
   ManyToMany,
   OneToMany,
   PrimaryGeneratedColumn,
@@ -49,6 +50,11 @@ export class UserEntity {
   @OneToMany(() => QuizzEntity, (quizz) => quizz.owner)
   quizzes: QuizzEntity[];
 
-  @ManyToMany(() => UserEntity, (friend) => friend.friends)
+  @ManyToMany(() => UserEntity)
+  @JoinTable({
+    name: 'user_friends',
+    joinColumn: { name: 'user_id' },
+    inverseJoinColumn: { name: 'friend_id' },
+  })
   friends: UserEntity[];
 }

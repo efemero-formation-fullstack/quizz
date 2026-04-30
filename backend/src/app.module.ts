@@ -29,6 +29,7 @@ import { QuizzService } from './services/quizz/quizz.service';
 import { ThemeService } from './services/theme/theme.service';
 import { GameService } from './services/game/game.service';
 import { UserService } from './services/user/user.service';
+import { FriendController } from './controllers/friend/friend.controller';
 
 console.log(process.env);
 @Module({
@@ -75,6 +76,7 @@ console.log(process.env);
     QuizzController,
     ThemeController,
     UserController,
+    FriendController,
   ],
   providers: [
     AppService,

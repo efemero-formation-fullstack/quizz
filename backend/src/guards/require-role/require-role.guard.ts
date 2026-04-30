@@ -6,7 +6,7 @@ import {
 } from '@nestjs/common';
 import { Reflector } from '@nestjs/core';
 import { UserRole } from '../../enums/user-role.enum';
-import { SessionInterface } from '../../interfaces/session.interface';
+import { Session } from '../../interfaces/session.interface';
 import { Request } from 'express';
 
 @Injectable()
@@ -20,7 +20,7 @@ export class RequireRoleGuard implements CanActivate {
     );
     const req = context
       .switchToHttp()
-      .getRequest<Request & { session: SessionInterface }>();
+      .getRequest<Request & { session: Session }>();
     //user pas connecté
     if (!req.session) {
       throw new UnauthorizedException('Not authenticated');
