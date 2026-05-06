@@ -1,4 +1,5 @@
 import { ChangeDetectionStrategy, Component, inject, OnInit, signal } from '@angular/core';
+import { RouterLink } from '@angular/router';
 import { UserService } from '../../../core/services/user.service';
 import { QuizzService } from '../../../core/services/quizz.service';
 import { ThemeService } from '../../../core/services/theme.service';
@@ -9,7 +10,7 @@ import { QuestionData } from '../../../core/models/question.interface';
 
 @Component({
   selector: 'app-admin-page',
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './admin-page.html',
   styleUrl: './admin-page.css',
   changeDetection: ChangeDetectionStrategy.OnPush,

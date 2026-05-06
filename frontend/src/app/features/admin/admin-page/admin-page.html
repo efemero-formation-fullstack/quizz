@@ -2,107 +2,108 @@
   <h1>Dashboard Admin</h1>
 
   <div class="tabs">
-    <button [class.active]="activeTab() === 'users'" (click)="activeTab.set('users')">Utilisateurs</button>
+    <button [class.active]="activeTab() === 'users'" (click)="activeTab.set('users')">
+      Utilisateurs
+    </button>
     <button [class.active]="activeTab() === 'quizz'" (click)="activeTab.set('quizz')">Quiz</button>
-    <button [class.active]="activeTab() === 'themes'" (click)="activeTab.set('themes')">Thèmes</button>
-    <button [class.active]="activeTab() === 'questions'" (click)="activeTab.set('questions')">Questions</button>
+    <button [class.active]="activeTab() === 'themes'" (click)="activeTab.set('themes')">
+      Thèmes
+    </button>
+    <button [class.active]="activeTab() === 'questions'" (click)="activeTab.set('questions')">
+      Questions
+    </button>
   </div>
 
   @if (activeTab() === 'users') {
-    <table>
-      <thead>
-        <tr>
-          <th>ID</th>
-          <th>Username</th>
-          <th>Email</th>
-          <th>Rôle</th>
-          <th>Actions</th>
-        </tr>
-      </thead>
-      <tbody>
-        @for (user of users(); track user.id) {
-          <tr>
-            <td>{{ user.id }}</td>
-            <td>{{ user.username }}</td>
-            <td>{{ user.email }}</td>
-            <td>{{ user.role }}</td>
-            <td>
-              <button class="btn-delete" (click)="deleteUser(user.id)">Supprimer</button>
-            </td>
-          </tr>
-        }
-      </tbody>
-    </table>
-  }
-
-  @if (activeTab() === 'quizz') {
-    <table>
-      <thead>
-        <tr>
-          <th>ID</th>
-          <th>Titre</th>
-          <th>Visibilité</th>
-          <th>Actions</th>
-        </tr>
-      </thead>
-      <tbody>
-        @for (quizz of quizzes(); track quizz.id) {
-          <tr>
-            <td>{{ quizz.id }}</td>
-            <td>{{ quizz.title }}</td>
-            <td>{{ quizz.visibility }}</td>
-            <td>
-              <button class="btn-delete" (click)="deleteQuizz(quizz.id)">Supprimer</button>
-            </td>
-          </tr>
-        }
-      </tbody>
-    </table>
-  }
-
-  @if (activeTab() === 'themes') {
-    <table>
-      <thead>
-        <tr>
-          <th>ID</th>
-          <th>Nom</th>
-          <th>Actions</th>
-        </tr>
-      </thead>
-      <tbody>
-        @for (theme of themes(); track theme.id) {
-          <tr>
-            <td>{{ theme.id }}</td>
-            <td>{{ theme.name }}</td>
-            <td>
-              <button class="btn-delete" (click)="deleteTheme(theme.id)">Supprimer</button>
-            </td>
-          </tr>
-        }
-      </tbody>
-    </table>
-  }
-
-  @if (activeTab() === 'questions') {
-    <table>
-      <thead>
-        <tr>
-          <th>ID</th>
-          <th>Question</th>
-          <th>Actions</th>
-        </tr>
-      </thead>
-      <tbody>
-        @for (question of questions(); track question.id) {
-          <tr>
-            <td>{{ question.id }}</td>
-            <td>{{ question.question }}</td>
-            <td>
-              <button class="btn-delete" (click)="deleteQuestion(question.id)">Supprimer</button>
-            </td>
-          </tr>
-        }
-      </tbody>
-    </table>
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Username</th>
+        <th>Email</th>
+        <th>Rôle</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      @for (user of users(); track user.id) {
+      <tr>
+        <td>{{ user.id }}</td>
+        <td>{{ user.username }}</td>
+        <td>{{ user.email }}</td>
+        <td>{{ user.role }}</td>
+        <td>
+          <a class="btn-view" [routerLink]="['/user', user.id]">Voir</a>
+          <button class="btn-delete" (click)="deleteUser(user.id)">Supprimer</button>
+        </td>
+      </tr>
+      }
+    </tbody>
+  </table>
+  } @if (activeTab() === 'quizz') {
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Titre</th>
+        <th>Visibilité</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      @for (quizz of quizzes(); track quizz.id) {
+      <tr>
+        <td>{{ quizz.id }}</td>
+        <td>{{ quizz.title }}</td>
+        <td>{{ quizz.visibility }}</td>
+        <td>
+          <button class="btn-delete" (click)="deleteQuizz(quizz.id)">Supprimer</button>
+        </td>
+      </tr>
+      }
+    </tbody>
+  </table>
+  } @if (activeTab() === 'themes') {
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Nom</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      @for (theme of themes(); track theme.id) {
+      <tr>
+        <td>{{ theme.id }}</td>
+        <td>{{ theme.name }}</td>
+        <td>
+          <button class="btn-delete" (click)="deleteTheme(theme.id)">Supprimer</button>
+        </td>
+      </tr>
+      }
+    </tbody>
+  </table>
+  } @if (activeTab() === 'questions') {
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Question</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      @for (question of questions(); track question.id) {
+      <tr>
+        <td>{{ question.id }}</td>
+        <td>{{ question.question }}</td>
+        <td>
+          <button class="btn-delete" (click)="deleteQuestion(question.id)">Supprimer</button>
+        </td>
+      </tr>
+      }
+    </tbody>
+  </table>
   }
 </div>

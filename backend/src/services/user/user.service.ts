@@ -1,4 +1,9 @@
-import { Injectable } from '@nestjs/common';
+import {
+  BadRequestException,
+  ConflictException,
+  Injectable,
+  NotFoundException,
+} from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 import { UserEntity } from '../../entities/user.entity';
@@ -22,7 +27,7 @@ export class UserService {
       where: { id },
       relations: { games: true, friends: true, quizzes: true },
     });
-    if (!user) throw new Error('User not found');
+    if (!user) throw new NotFoundException(`Utilisateur #${id} introuvable.`);
     return user;
   }
 
@@ -31,16 +36,23 @@ export class UserService {
       where: { email: friendEmail },
       relations: { friends: true },
     });
-    if (!friend) throw new Error('Friend not found');
+    if (!friend)
+      throw new NotFoundException('Aucun utilisateur trouvé avec cet email.');
     if (friend.id === userId)
-      throw new Error('Cannot add yourself as a friend');
+      throw new BadRequestException(
+        'Vous ne pouvez pas vous ajouter vous-même.',
+      );
 
     const user = await this.getById(userId);
 
-    if (!user.friends.some((f) => f.id === friend.id)) {
-      user.friends.push(friend);
-      await this._userRepo.save(user);
+    if (user.friends.some((f) => f.id === friend.id)) {
+      throw new ConflictException(
+        "Cet utilisateur est déjà dans votre liste d'amis.",
+      );
     }
+
+    user.friends.push(friend);
+    await this._userRepo.save(user);
 
     if (!friend.friends.some((f) => f.id === userId)) {
       friend.friends.push(user);
