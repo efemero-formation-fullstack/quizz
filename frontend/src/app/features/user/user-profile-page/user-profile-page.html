@@ -1,0 +1,119 @@
+@if (user()) {
+<h1>Profil — {{ user()!.username }}</h1>
+
+<div class="info-card">
+  <div class="info-grid">
+    <div class="info-item">
+      <span class="label">ID</span>
+      <span>{{ user()!.id }}</span>
+    </div>
+    <div class="info-item">
+      <span class="label">Username</span>
+      <span>{{ user()!.username }}</span>
+    </div>
+    <div class="info-item">
+      <span class="label">Email</span>
+      <span>{{ user()!.email }}</span>
+    </div>
+    <div class="info-item">
+      <span class="label">Date de naissance</span>
+      <span>{{ user()!.birthdate | date:'dd/MM/yyyy' }}</span>
+    </div>
+    <div class="info-item">
+      <span class="label">Genre</span>
+      <span>{{ user()!.gender }}</span>
+    </div>
+    <div class="info-item">
+      <span class="label">Rôle</span>
+      <span>{{ user()!.role }}</span>
+    </div>
+  </div>
+</div>
+
+<h2>Amis ({{ user()!.friends?.length ?? 0 }})</h2>
+
+@if (isOwnProfile()) {
+<div class="add-friend">
+  <input
+    type="email"
+    placeholder="Email de l'ami"
+    [ngModel]="friendEmail()"
+    (ngModelChange)="friendEmail.set($event)"
+  />
+  <button (click)="addFriend()" [disabled]="!friendEmail().trim()">Ajouter</button>
+</div>
+@if (error()) {
+<p class="error">{{ error() }}</p>
+} }
+
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Username</th>
+      <th>Email</th>
+      <th>Rôle</th>
+      @if (isOwnProfile()) {
+      <th>Actions</th>
+      }
+    </tr>
+  </thead>
+  <tbody>
+    @for (friend of user()!.friends ?? []; track friend.id) {
+    <tr>
+      <td>{{ friend.id }}</td>
+      <td>{{ friend.username }}</td>
+      <td>{{ friend.email }}</td>
+      <td>{{ friend.role }}</td>
+      @if (isOwnProfile()) {
+      <td>
+        <button class="btn-delete" (click)="removeFriend(friend.id)">Supprimer</button>
+      </td>
+      }
+    </tr>
+    }
+  </tbody>
+</table>
+
+<h2>Parties ({{ user()!.games?.length ?? 0 }})</h2>
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Score</th>
+      <th>Statut</th>
+    </tr>
+  </thead>
+  <tbody>
+    @for (game of user()!.games ?? []; track game.id) {
+    <tr>
+      <td>{{ game.id }}</td>
+      <td>{{ game.score }}</td>
+      <td>{{ game.status }}</td>
+    </tr>
+    }
+  </tbody>
+</table>
+
+<h2>Quizz créés ({{ user()!.quizzes?.length ?? 0 }})</h2>
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Titre</th>
+      <th>Visibilité</th>
+    </tr>
+  </thead>
+  <tbody>
+    @for (quizz of user()!.quizzes ?? []; track quizz.id) {
+    <tr>
+      <td>{{ quizz.id }}</td>
+      <td>{{ quizz.title }}</td>
+      <td>{{ quizz.visibility }}</td>
+    </tr>
+    }
+  </tbody>
+</table>
+} @else {
+<p class="loading">Chargement...</p>
+}

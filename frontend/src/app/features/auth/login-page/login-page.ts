@@ -25,7 +25,8 @@ export class LoginPage {
     if (this.form.invalid) return;
     try {
       await this._authService.login(this.form.value as any);
-      this._router.navigate(['/dashboard']);
+      const destination = this._authService.isAdmin() ? '/admin' : '/user/me';
+      this._router.navigate([destination]);
     } catch {
       this.error.set('Identifiants incorrects');
     }

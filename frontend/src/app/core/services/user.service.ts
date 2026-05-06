@@ -18,8 +18,28 @@ export class UserService {
     return response.data;
   }
 
+  async getById(id: number): Promise<User> {
+    const response = await firstValueFrom(
+      this._httpClient.get<{ data: User }>(this._apiUrl + '/user/' + id),
+    );
+    return response.data;
+  }
+
+  async addFriend(email: string): Promise<User> {
+    const response = await firstValueFrom(
+      this._httpClient.post<{ data: User }>(this._apiUrl + '/user/friend', { email }),
+    );
+    return response.data;
+  }
+
+  async removeFriend(friendId: number): Promise<User> {
+    const response = await firstValueFrom(
+      this._httpClient.delete<{ data: User }>(this._apiUrl + '/user/friend/' + friendId),
+    );
+    return response.data;
+  }
+
   async delete(id: number): Promise<void> {
     await firstValueFrom(this._httpClient.delete(this._apiUrl + '/user/' + id));
   }
 }
-

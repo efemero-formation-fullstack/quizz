@@ -26,7 +26,9 @@ h1 {
   font-size: 1rem;
   color: #555;
   border-radius: 6px 6px 0 0;
-  transition: background 0.2s, color 0.2s;
+  transition:
+    background 0.2s,
+    color 0.2s;
 }
 
 .tabs button:hover {
@@ -71,6 +73,22 @@ tr:last-child td {
 
 tr:hover td {
   background: #f9f9f9;
+}
+
+.btn-view {
+  display: inline-block;
+  padding: 0.3rem 0.8rem;
+  background: #1a1a2e;
+  color: white;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 0.85rem;
+  margin-right: 0.4rem;
+  transition: background 0.2s;
+}
+
+.btn-view:hover {
+  background: #2e2e4e;
 }
 
 .btn-delete {
