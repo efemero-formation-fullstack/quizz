@@ -2,7 +2,6 @@ import {
   Column,
   Entity,
   JoinColumn,
-  JoinTable,
   ManyToMany,
   ManyToOne,
   OneToMany,
@@ -33,6 +32,5 @@ export class QuestionEntity {
   answers: AnswerEntity[];
 
   @ManyToMany(() => QuizzEntity, (q) => q.questions)
-  @JoinTable({ name: 'quizzes_questions' })
   quizzes: QuizzEntity[];
 }

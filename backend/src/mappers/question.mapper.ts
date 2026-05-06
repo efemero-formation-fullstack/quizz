@@ -32,7 +32,6 @@ export function questionEntityToQuestionListingDto(
   dto.question = entity.question;
   dto.id = entity.id;
   dto.theme = themeEntityToDto(entity.theme);
-  console.log(entity.theme);
 
   return dto;
 }
