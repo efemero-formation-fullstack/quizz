@@ -42,7 +42,7 @@ export class UserProfilePage implements OnInit {
     if (!email) return;
     try {
       this.error.set('');
-      const updated = await this._userService.addFriend(email);
+      const updated = await this._userService.addFriend(this.user()!.id, email);
       this.user.set(updated);
       this.friendEmail.set('');
     } catch (err: unknown) {

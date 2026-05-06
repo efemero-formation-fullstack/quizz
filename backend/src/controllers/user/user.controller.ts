@@ -48,13 +48,13 @@ export class UserController {
     return { data: userEntityToDto(user) };
   }
 
-  @Post('friend')
+  @Post(':id/friend')
   @RequireRole()
   async addFriend(
+    @Param('id', ParseIntPipe) id: number,
     @Body('email') friendEmail: string,
-    @Req() req: Request & { session: Session },
   ): Promise<{ data: UserDto }> {
-    const user = await this._userService.addFriend(req.session.id, friendEmail);
+    const user = await this._userService.addFriend(id, friendEmail);
     return { data: userEntityToDto(user) };
   }
 
