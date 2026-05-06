@@ -2,6 +2,7 @@ import type { UserDto } from './user.dto';
 import { QuizzVisibility } from 'src/enums/quizz_visibility.enum';
 import { GameDto } from './game.dto';
 import { ThemeDto } from './theme.dto';
+import { QuestionDto } from './question.dto';
 
 export class QuizzDto {
   id: number;
@@ -9,7 +10,7 @@ export class QuizzDto {
   imgUrl: string;
   visibility: QuizzVisibility;
   theme: ThemeDto;
-  questions: number[];
+  questions: QuestionDto[];
   games?: GameDto[];
   owner?: UserDto;
 }

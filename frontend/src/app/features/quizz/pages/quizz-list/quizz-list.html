@@ -1,0 +1,22 @@
+<div class="container">
+  <h1>Choisir un quiz</h1>
+
+  @if (errorMessage()) {
+    <p class="error">{{ errorMessage() }}</p>
+  }
+
+  <div class="quizz-grid">
+    @for (quizz of quizzes(); track quizz.id) {
+      <div class="quizz-card">
+        @if (quizz.imgUrl) {
+          <img [src]="'http://localhost:3000' + quizz.imgUrl" [alt]="quizz.title" />
+        }
+        <div class="card-body">
+          <h2>{{ quizz.title }}</h2>
+          <p>{{ quizz.visibility }}</p>
+          <button (click)="goToPlay(quizz.id)">Jouer</button>
+        </div>
+      </div>
+    }
+  </div>
+</div>

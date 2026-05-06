@@ -20,7 +20,7 @@ export class QuizzService {
   async getById(id: number): Promise<QuizzEntity> {
     const Theme = await this._quizzRepo.findOne({
       where: { id },
-      relations: { games: true, owner: true },
+      relations: { games: true, owner: true, questions: { answers: true, correct_answer: true, theme: true } },
     });
     if (!Theme) throw new Error('Theme not found');
     return Theme;
