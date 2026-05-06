@@ -31,8 +31,7 @@
 </div>
 
 <h2>Amis ({{ user()!.friends?.length ?? 0 }})</h2>
-
-@if (isOwnProfile()) {
+@if (isOwnProfile()||isAdmin()) {
 <div class="add-friend">
   <input
     type="email"
