@@ -112,7 +112,6 @@ async function main() {
             }
           }
         }
-        theme.questions = questions;
         await em.save(theme);
       }
     });

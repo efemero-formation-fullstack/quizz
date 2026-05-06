@@ -1,14 +1,20 @@
 import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { QuizzCreateDto } from 'src/dtos/quizz.form.dto';
+import { QuestionEntity } from 'src/entities/question.entity';
 import { QuizzEntity } from 'src/entities/quizz.entity';
-import { Repository } from 'typeorm';
+import { ThemeEntity } from 'src/entities/theme.entity';
+import { In, Repository } from 'typeorm';
 
 @Injectable()
 export class QuizzService {
   constructor(
     @InjectRepository(QuizzEntity)
     private readonly _quizzRepo: Repository<QuizzEntity>,
+    @InjectRepository(ThemeEntity)
+    private readonly _themeRepo: Repository<ThemeEntity>,
+    @InjectRepository(QuestionEntity)
+    private readonly _questionRepo: Repository<QuestionEntity>,
   ) {}
 
   async getAll(): Promise<QuizzEntity[]> {
@@ -18,12 +24,16 @@ export class QuizzService {
   }
 
   async getById(id: number): Promise<QuizzEntity> {
-    const Theme = await this._quizzRepo.findOne({
+    const quizz = await this._quizzRepo.findOne({
       where: { id },
-      relations: { games: true, owner: true, questions: { answers: true, correct_answer: true, theme: true } },
+      relations: {
+        games: true,
+        owner: true,
+        questions: { answers: true, correct_answer: true, theme: true },
+      },
     });
-    if (!Theme) throw new Error('Theme not found');
-    return Theme;
+    if (!quizz) throw new Error('Quizz not found');
+    return quizz;
   }
 
   async create(data: QuizzCreateDto): Promise<QuizzEntity> {
@@ -33,17 +43,32 @@ export class QuizzService {
     if (existingTitle)
       throw new Error(`Quizz with title ${data.title} already exists`);
 
-    return await this._quizzRepo.save(data);
+    const quizz = this._quizzRepo.create({
+      title: data.title,
+      imgUrl: data.imgUrl,
+      visibility: data.visibility,
+    });
+
+    if (data.themeIds && data.themeIds.length > 0) {
+      quizz.themes = await this._themeRepo.findBy({ id: In(data.themeIds) });
+      quizz.questions = await this._questionRepo.find({
+        where: { theme: { id: In(data.themeIds) } },
+        take: 5,
+      });
+    }
+
+    const saved = await this._quizzRepo.save(quizz);
+    return await this.getById(saved.id);
   }
 
   async update(id: number, data: Partial<QuizzEntity>): Promise<QuizzEntity> {
-    const Theme = await this.getById(id);
-    Object.assign(Theme, data);
-    return await this._quizzRepo.save(Theme);
+    const quizz = await this.getById(id);
+    Object.assign(quizz, data);
+    return await this._quizzRepo.save(quizz);
   }
 
   async delete(id: number): Promise<void> {
-    const Theme = await this.getById(id);
-    await this._quizzRepo.remove(Theme);
+    const quizz = await this.getById(id);
+    await this._quizzRepo.remove(quizz);
   }
 }
