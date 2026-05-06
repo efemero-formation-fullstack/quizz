@@ -2,6 +2,7 @@ import { QuizzDto } from 'src/dtos/quizz.dto';
 import { UserDto } from 'src/dtos/user.dto';
 import { QuizzEntity } from 'src/entities/quizz.entity';
 import { gameEntityToDto } from './game.mapper';
+import { questionEntityToQuestionDto } from './question.mapper';
 
 export function QuizzEntityToDto(entity: QuizzEntity) {
   const dto = new QuizzDto();
@@ -9,6 +10,9 @@ export function QuizzEntityToDto(entity: QuizzEntity) {
   dto.title = entity.title;
   dto.imgUrl = entity.imgUrl;
   dto.visibility = entity.visibility;
+  if (entity.questions) {
+    dto.questions = entity.questions.map(questionEntityToQuestionDto);
+  }
   if (entity.games) {
     dto.games = entity.games.map(gameEntityToDto);
   }

@@ -20,11 +20,11 @@
     "forceConsistentCasingInFileNames": true,
     "noImplicitAny": false,
     "strictBindCallApply": false,
-    "noFallthroughCasesInSwitch": false,
+    "noFallthroughCasesInSwitch": false
   },
   "watchOptions": {
     "watchFile": "dynamicPriorityPolling",
     "watchDirectory": "dynamicPriorityPolling",
-    "excludeDirectories": ["**/node_modules", "dist"],
-  },
+    "excludeDirectories": ["**/node_modules", "dist"]
+  }
 }

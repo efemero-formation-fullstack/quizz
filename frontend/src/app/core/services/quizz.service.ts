@@ -10,6 +10,13 @@ export class QuizzService {
   private readonly _httpClient = inject(HttpClient);
   private readonly _apiUrl = environment.apiUrl;
 
+  async getById(id: number): Promise<any> {
+    const response = await firstValueFrom(
+      this._httpClient.get<{ data: any }>(this._apiUrl + '/quizz/' + id),
+    );
+    return response.data;
+  }
+
   async getAll(): Promise<any[]> {
     const response = await firstValueFrom(
       this._httpClient.get<{ data: any[] }>(this._apiUrl + '/quizz'),

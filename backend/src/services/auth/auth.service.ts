@@ -5,7 +5,9 @@ import * as bcrypt from 'bcrypt';
 import { Repository } from 'typeorm';
 import { LoginFormDto, RegisterFormDto } from '../../dtos/auth.form.dto';
 import { UserEntity } from '../../entities/user.entity';
-
+import {
+  BadRequestException
+} from '@nestjs/common';
 @Injectable()
 export class AuthService {
   constructor(
@@ -33,7 +35,7 @@ export class AuthService {
     const user = await this._userRepo.findOne({
       where: { username: data.username },
     });
-    if (!user) throw new Error('Invalid credentials');
+    if (!user) throw new BadRequestException('Invalid credentials');
 
     const isPasswordValid = await bcrypt.compare(data.password, user.password);
     if (!isPasswordValid) throw new Error('Invalid credentials');
