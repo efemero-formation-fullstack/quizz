@@ -5,6 +5,7 @@ import { ActivatedRoute } from '@angular/router';
 import { AuthService } from '../../../core/services/auth.service';
 import { UserService } from '../../../core/services/user.service';
 import { User } from '../../../core/models/user.interface';
+import authRoutes from '../../auth/auth.routes';
 
 @Component({
   selector: 'app-user-profile-page',
@@ -20,6 +21,7 @@ export class UserProfilePage implements OnInit {
 
   protected user = signal<User | null>(null);
   protected isOwnProfile = signal(false);
+  protected isAdmin = signal(false);
   protected friendEmail = signal('');
   protected error = signal('');
 
@@ -28,6 +30,7 @@ export class UserProfilePage implements OnInit {
       const idParam = this._route.snapshot.paramMap.get('id');
       const id = idParam ? +idParam : this._authService.userId()!;
       this.isOwnProfile.set(!idParam);
+      this.isAdmin.set(this._authService.isAdmin());
       this.user.set(await this._userService.getById(id));
     } catch {
       console.error('Erreur lors du chargement du profil');
