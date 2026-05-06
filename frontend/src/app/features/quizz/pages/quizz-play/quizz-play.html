@@ -1,1 +1,47 @@
-<p>quizz-play works!</p>
+@if (phase() === 'loading') {
+  <div class="loading">Chargement...</div>
+}
+
+@if (phase() === 'playing' && currentQuestion()) {
+  <div class="play-container">
+    <div class="progress">
+      Question {{ currentIndex() + 1 }} / {{ quiz().questions.length }}
+    </div>
+
+    <div class="question-card">
+      <h2>{{ currentQuestion().question }}</h2>
+    </div>
+
+    <div class="answers">
+      @for (answer of currentQuestion().answers; track answer.id) {
+        <button
+          class="answer-btn"
+          [class.correct]="getAnswerState(answer.id) === 'correct'"
+          [class.wrong]="getAnswerState(answer.id) === 'wrong'"
+          [disabled]="isAnswered()"
+          (click)="selectAnswer(answer.id)"
+        >
+          {{ answer.answer }}
+        </button>
+      }
+    </div>
+  </div>
+}
+
+@if (phase() === 'results') {
+  <div class="results-container">
+    <h2>Résultats</h2>
+    <p class="score">{{ score() }} / {{ quiz().questions.length }}</p>
+
+    <ul class="results-list">
+      @for (q of quiz().questions; track q.id) {
+        <li [class.ok]="getAnswerForQuestion(q.id)?.correct" [class.ko]="!getAnswerForQuestion(q.id)?.correct">
+          <span class="q-text">{{ q.question }}</span>
+          <span class="q-answer">Bonne réponse : {{ q.correct_answer.answer }}</span>
+        </li>
+      }
+    </ul>
+
+    <button class="btn-restart" (click)="restart()">Retour aux quizz</button>
+  </div>
+}

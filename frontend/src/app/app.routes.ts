@@ -46,6 +46,11 @@ export const routes: Routes = [
       import('./features/quizz/pages/quizz-create/quizz-create').then((m) => m.QuizzCreate),
   },
   {
+    path: 'quizz/:id/play',
+    loadComponent: () =>
+      import('./features/quizz/pages/quizz-play/quizz-play').then((m) => m.QuizzPlay),
+  },
+  {
     path: 'user',
     loadChildren: () => import('./features/user/user.routes').then((m) => m.USER_ROUTES),
   },
