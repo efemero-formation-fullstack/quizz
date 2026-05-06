@@ -25,9 +25,9 @@ export class UserService {
     return response.data;
   }
 
-  async addFriend(email: string): Promise<User> {
+  async addFriend(id: number, email: string): Promise<User> {
     const response = await firstValueFrom(
-      this._httpClient.post<{ data: User }>(this._apiUrl + '/user/friend', { email }),
+      this._httpClient.post<{ data: User }>(this._apiUrl + '/user/' + id + '/friend', { email }),
     );
     return response.data;
   }
